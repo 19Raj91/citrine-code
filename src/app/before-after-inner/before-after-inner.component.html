@@ -1,0 +1,46 @@
+
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage" [useSrcset]="true">
+<div class="banner-heading">{{ cat.name }}</div>
+
+<div class="bredcurmbborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bredcrumb">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/before-after">Real Result</a></li>
+                        <li><a routerLink="/">{{ cat.name }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div id="beforeAfter">
+    <div class="container">
+        <div class="container-max">
+            <div class="row">
+                <div class="col-12 col-lg-6" *ngFor="let res of result | paginate: { itemsPerPage: 6, currentPage: p }">
+                    <div class="galeryimage">
+                        <img src="{{bgimageurl+res.beforeimg}}" alt="{{ res.alt_tag }}" class="w-100 img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-12 text-center">
+          <div class="paginationlist">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+    </div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

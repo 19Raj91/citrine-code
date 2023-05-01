@@ -1,0 +1,133 @@
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage"
+        [useSrcset]="true">
+    <div class="banner-heading for-mobile">Technologies</div>
+    <div class="banner-heading for-desktop">Technologies</div>
+
+    <div class="bredcurmbborder">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bredcrumb">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                            <li><a>Technologies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+
+
+<div class="our-technologies-wrap">
+    <div class="container">
+        <div class="ourtechheading commongold-heading">Our Technologies</div>
+        <div class="row">
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image2" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Alma Harmony</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image3" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Ultracel Q+</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image4" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Primelase LHR</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image5" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Secret MNRF</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image6" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Dermapen Use</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image7" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Oxygeneo</a>
+                </div>
+
+            </div>
+
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image8" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Hydrafacial Machine</a>
+                </div>
+
+            </div>
+<!-- 
+            <div class="col-6 col-lg-3">
+                <div class="dteck-wrap">
+                    <div class="dteckimage-wrap">
+                        <a routerLink="/">
+                            <img [lazyLoad]="image5" alt="Dr image" class="w-100">
+                        </a>
+                    </div>
+                    <a routerLink="/">Secret MNRF</a>
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

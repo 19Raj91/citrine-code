@@ -1,0 +1,386 @@
+<!-- <p  *ngIf="fix_navbar_header"> True</p>
+<p  *ngIf="!fix_navbar_header"> False</p> -->
+<header [class.headerfix]="navFixed" [ngClass]="ishome ? 'webheader fix-navbar-header' : 'webheader'"  *ngIf="fix_navbar_header">
+    <div class="header-wrapper">
+        <div class="logo-wrap">
+            <a routerLink="/">
+                <img src="assets/images/logo.svg" class="img-fluid" width="200px">
+            </a>
+        </div>
+        <div class="mobile-wrap for-mobile">
+            <app-mobile-nevigation></app-mobile-nevigation>
+        </div>
+        <div class="navigationwrap for-desktop">
+            <ul class="webnavigation" (mouseover)="togglehover()" (mouseenter)="togglehover()">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="autowidth" (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li><a routerLink="/dermatologist-in-gurgaon">About Doctor</a></li>
+                        <li><a routerLink="/skin-clinic-in-gurgaon">About Clinic</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/services">Services <i class="fa fa-chevron-down"></i></a>
+                    <ul  (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li class="has-child"><a routerLink="/fairness-and-pigmentation">Skin Toning & Pigmentation</a>
+                            <ul  (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Pigmentation</a></li>
+                                <li><a routerLink="/laser-toning-in-gurgaon">Laser Toning</a></li>
+                                <li><a routerLink="">Skin Toning</a></li>
+                                <li><a routerLink="/carbon-peel-treatment-in-gurgaon">Carbon Peel</a></li>
+                                <li><a routerLink="/dark-circles-treatment-gurgaon">Dark Circles</a></li>
+                                <li><a routerLink="/dark-spots-removal-treatment-in-gurgaon">Dark Spots</a></li>
+                                <li><a>Skin Texture Improvement</a></li>
+                                <li><a routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                                <li><a routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                                <li><a>Laser Tattoo Removal</a></li>
+                                <li><a>Rosacea</a></li>
+                                <!--
+                                <li><a routerLink="/fairness-and-pigmentation">Freckles</a></li>
+                              <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyperpigmentation</a></li>
+                                <li><a routerLink="/photofacial-treatment-in-gurgaon">Photofacial</a></li>
+                                <li><a routerLink="/skin-lightening-treatment-gurgaon">Skin Lightening Treatment</a></li>
+                                <li><a routerLink="/skin-whitening-treatment-gurgaon">Skin Whitening Treatment</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/general-dermatology">General Dermatology</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/psoriasis-treatment-gurgaon">Psoriasis</a></li>
+                                <li><a>Vitiligo</a></li>
+                                <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyper Pigmentation</a></li>
+                                <li><a>Keloids</a></li>
+                                <li><a>Atopic Dermatitis</a></li>
+                                <li><a>Corns</a></li>
+                                <li><a>Mole</a></li>
+                                <li><a>Hairfall</a></li>
+                                <li><a>Horns</a></li>
+                                <li><a routerLink="book-an-appointment">Warts</a></li>
+                                <li><a routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                                <li><a routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                                <li><a>Nail Avulsion</a></li>
+                                <li><a routerLink="/ingrown-toe-nail">Ingrown Toe Nail</a></li>
+                                <li><a>Birth Marks</a></li>
+                                <li><a>Skin Rashes</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/aging-skin">Aging Skin and Facial Contouring</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/anti-wrinkle-injection-in-gurgaon">Anti Wrinkle Injection</a></li>
+                                <li><a routerLink="/dermal-fillers-treatment-in-gurgaon">Dermal Fillers</a></li>
+                                <li><a routerLink="/vampire-facelift-treatment-in-gurgaon">Vampire Facelift</a></li>
+                                <li><a routerLink="/thread-lift-treatment-gurgaon">Thread Lift</a></li>
+                                <li><a>Laser Peels and Skin Rejuvenation</a></li>
+                                <li><a>Chin Enhancement</a></li>
+                                <li><a routerLink="/lip-enhancement-surgery-gurgaon">Lip Enhancement</a></li>
+                                <li><a>Tear Trough</a></li>
+                                <li><a routerLink="book-an-appointment">Crow’s Feet</a></li>
+                                <li><a>Sagging Skin</a></li>
+                                <li><a>Forehead Lines</a></li>
+                                <li><a>Under Eye Rejuvenation</a></li>
+                                <li><a routerLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                                <li><a routerLink="/microdermabrasion-treatment-in-gurgaon">Microdermabrasion</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/acne-scars">Acne &amp; Scars</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/acne-treatment-in-gurgaon">Acne</a></li>
+                                <li><a routerLink="/acne-scar-treatment-in-gurgaon">Acne Scar Reduction</a></li>
+                                <li><a>Open Pores</a></li>
+                                <li><a routerLink="/laser-resurfacing-in-gurgaon">Laser Resurfacing</a></li>
+                                <li><a routerLink="/skin-resurfacing-treatment-in-gurgaon">Skin Resurfacing</a></li>
+                                <li><a>MNRF</a></li>
+                                <!-- <li><a routerLink="/acne-scar-treatment-in-gurgaon">Scars</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/unwanted-body-hair">Unwanted Hair</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/laser-hair-removal-in-gurgaon">Laser Hair Reduction</a></li>
+                                <li><a>Beard Shaping</a></li>
+                                <li><a>Hair Removal in Male</a></li>
+                                <li><a>Hair Removal in Female </a></li>
+                                <li><a>Facial Hair Removal</a></li>
+                                <li><a>Full Body Hair Removal</a></li>
+                                <li><a>Legs Hair Removal</a></li>
+                                <li><a>Back Hair Reduction</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/hair-treatments">Hair Treatments</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Hairfall</a></li>
+                                <li><a routerLink="/dermaroller-treatment-in-gurgaon">Dermaroller</a></li>
+                                <li><a routerLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                                <li><a routerLink="/growth-factor-injection">Growth Factor Injection</a></li>
+                                <li><a routerLink="/fue-hair-transplant-in-gurgaon">FUE Hair Transplant</a></li>
+                                <li><a routerLink="/fut-hair-transplant-in-gurgaon">FUT Hair Transplant</a></li>
+                                <!-- <li><a routerLink="/hair-treatments/alopecia-areata-treatment-gurgaon">Alopecia Areata Treatment</a></li>
+                                <li><a routerLink="/hair-treatments">Hair Transplant</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/medical-facial">Medical Facial</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/aquajet-oxy-peel-facial-in-gurgaon">Aquajet Oxy Peel Facial</a></li>
+                                <!-- <li><a routerLink="/book-an-appointment">Miracle Facial</a></li> -->
+                                <li><a routerLink="/carbon-peel-treatment-in-gurgaon">Carbon Peel</a></li>
+                                <li><a routerLink="/chemical-peel-treatment-in-gurgaon">Chemical Peel</a></li>
+                                <li><a routerLink="/pumpkin-peel-facial-treatment-in-gurgaon">Pumpkin Peel Facial</a></li>
+                                <li><a routerLink="/oxygen-facial-treatment-in-gurgaon">The Oxygen Facial</a></li>
+                                <!--<li><a routerLink="/medical-facial/hydrafacial-in-gurgaon">Hydrafacial in Gurgaon</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/skin-tightening-and-stretch-marks">Skin Tightening &amp; Stretch Marks</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Face Tightening</a> </li>
+                                <li><a routerLink="/stretch-marks-treatment-in-gurgaon">Stretch Marks Reduction</a></li>
+                                <li><a>HIFU</a></li>
+                                <!-- <li><a routerLink="/skin-tightening-and-stretch-marks/skin-tightening-treatment-in-gurgaon">Skin Tightening</a> </li> -->
+                            </ul>
+                        </li>
+
+
+
+                        <li class="has-child"><a>Skin Glow and Resurfacing</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Chemical Peel </a></li>
+                                <li><a>Mesoglow </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/skin-allergy">Skin Allergy</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/eczema-treatment-in-gurgaon">Eczema</a></li>
+                                <li><a routerLink="/urticaria-treatment-in-gurgaon">Urticaria</a></li>
+                                <li><a routerLink="/atopic-dermatitis-treatment-in-gurgaon">Atopic Dermatitis</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/infections">Infections</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/fungal-infections-treatment-in-gurgaon">Fungal Infection</a></li>
+                                <li><a>Viral Infection</a></li>
+                                <li><a>Bacterial Infection</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/bridal-dermatology">Bridal Dermatology</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Bridal Skin Care</a></li>
+                                <li><a>Groom Skin Care</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/dermato-surgery">Dermato Surgery</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Mole &amp; Warts Removal</a></li>
+                                <li><a>Vitiligo</a></li>
+                            </ul>
+                        </li>
+                        <!--<li><a routerLink="/paediatric-dermatology">Paediatric Dermatology</a></li>
+                        <li><a routerLink="/ear-piercing-gurgaon">Ear Piercing</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/clinic-gallery">Gallery</a></li>
+                <li><a routerLink="/">Testimonials <i class="fa fa-chevron-down"></i></a>
+                    <ul class="autowidth" (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li><a routerLink="/testimonials">Written Testimonials</a></li>
+                        <!-- <li><a routerLink="/video-testimonial">Video Testimonials</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/blog">Blogs</a></li>
+                <li><a routerLink="/contact">Contact Us</a></li>
+                <li><a routerLink="/book-an-appointment">Request An Appointment</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<header [class.headerfix]="navFixed" class="webheader" *ngIf="!fix_navbar_header">
+    <div class="header-wrapper">
+        <div class="logo-wrap">
+            <a routerLink="/">
+                <img src="assets/images/logo.svg" class="img-fluid" width="200px">
+            </a>
+        </div>
+        <div class="mobile-wrap for-mobile">
+            <app-mobile-nevigation></app-mobile-nevigation>
+        </div>
+        <div class="navigationwrap for-desktop">
+            <ul class="webnavigation" (mouseover)="togglehover()" (mouseenter)="togglehover()">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/">About <i class="fa fa-chevron-down"></i></a>
+                    <ul class="autowidth" (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li><a routerLink="/dermatologist-in-gurgaon">About Doctor</a></li>
+                        <li><a routerLink="/skin-clinic-in-gurgaon">About Clinic</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/services">Services <i class="fa fa-chevron-down"></i></a>
+                    <ul  (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li class="has-child"><a routerLink="/fairness-and-pigmentation">Skin Toning & Pigmentation</a> 
+                            <ul  (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Pigmentation</a></li>
+                                <li><a routerLink="/laser-toning-in-gurgaon">Laser Toning</a></li>
+                                <li><a routerLink="">Skin Toning</a></li>
+                                <li><a routerLink="/carbon-peel-treatment-in-gurgaon">Carbon Peel</a></li>
+                                <li><a routerLink="/dark-circles-treatment-gurgaon">Dark Circles</a></li>
+                                <li><a routerLink="/dark-spots-removal-treatment-in-gurgaon">Dark Spots</a></li>
+                                <li><a>Skin Texture Improvement</a></li>
+                                <li><a routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                                <li><a routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                                <li><a>Laser Tattoo Removal</a></li>
+                                <li><a>Rosacea</a></li>
+                                <!--
+                                <li><a routerLink="/fairness-and-pigmentation">Freckles</a></li>
+                              <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyperpigmentation</a></li>
+                                <li><a routerLink="/photofacial-treatment-in-gurgaon">Photofacial</a></li>
+                                <li><a routerLink="/skin-lightening-treatment-gurgaon">Skin Lightening Treatment</a></li>
+                                <li><a routerLink="/skin-whitening-treatment-gurgaon">Skin Whitening Treatment</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/general-dermatology">General Dermatology</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/psoriasis-treatment-gurgaon">Psoriasis</a></li>
+                                <li><a>Vitiligo</a></li>
+                                <li><a routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyper Pigmentation</a></li>
+                                <li><a>Keloids</a></li>
+                                <li><a>Atopic Dermatitis</a></li>
+                                <li><a>Corns</a></li>
+                                <li><a>Mole</a></li>
+                                <li><a>Hairfall</a></li>
+                                <li><a>Horns</a></li>
+                                <li><a routerLink="book-an-appointment">Warts</a></li>
+                                <li><a routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                                <li><a routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                                <li><a>Nail Avulsion</a></li>
+                                <li><a routerLink="/ingrown-toe-nail">Ingrown Toe Nail</a></li>
+                                <li><a>Birth Marks</a></li>
+                                <li><a>Skin Rashes</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/aging-skin">Aging Skin and Facial Contouring</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/anti-wrinkle-injection-in-gurgaon">Anti Wrinkle Injection</a></li>
+                                <li><a routerLink="/dermal-fillers-treatment-in-gurgaon">Dermal Fillers</a></li>
+                                <li><a routerLink="/vampire-facelift-treatment-in-gurgaon">Vampire Facelift</a></li>
+                                <li><a routerLink="/thread-lift-treatment-gurgaon">Thread Lift</a></li>
+                                <li><a>Laser Peels and Skin Rejuvenation</a></li>
+                                <li><a>Chin Enhancement</a></li>
+                                <li><a routerLink="/lip-enhancement-surgery-gurgaon">Lip Enhancement</a></li>
+                                <li><a>Tear Trough</a></li>
+                                <li><a>Crow’s Feet</a></li>
+                                <li><a>Sagging Skin</a></li>
+                                <li><a>Forehead Lines</a></li>
+                                <li><a>Under Eye Rejuvenation</a></li>
+                                <li><a routerLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                                <li><a routerLink="/microdermabrasion-treatment-in-gurgaon">Microdermabrasion</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/acne-scars">Acne &amp; Scars</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/acne-treatment-in-gurgaon">Acne</a></li>
+                                <li><a routerLink="/acne-scar-treatment-in-gurgaon">Acne Scar Reduction</a></li>
+                                <li><a>Open Pores</a></li>
+                                <li><a routerLink="/laser-resurfacing-in-gurgaon">Laser Resurfacing</a></li>
+                                <li><a routerLink="/skin-resurfacing-treatment-in-gurgaon">Skin Resurfacing</a></li>
+                                <li><a>MNRF</a></li>
+                                <!-- <li><a routerLink="/acne-scar-treatment-in-gurgaon">Scars</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/unwanted-body-hair">Unwanted Hair</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/laser-hair-removal-in-gurgaon">Laser Hair Reduction</a></li>
+                                <li><a>Beard Shaping</a></li>
+                                <li><a>Hair Removal in Male</a></li>
+                                <li><a>Hair Removal in Female </a></li>
+                                <li><a>Facial Hair Removal</a></li>
+                                <li><a>Full Body Hair Removal</a></li>
+                                <li><a>Legs Hair Removal</a></li>
+                                <li><a>Back Hair Reduction</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/hair-treatments">Hair Treatments</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Hairfall</a></li>
+                                <li><a routerLink="/dermaroller-treatment-in-gurgaon">Dermaroller</a></li>
+                                <li><a routerLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                                <li><a routerLink="/growth-factor-injection">Growth Factor Injection</a></li>
+                                <li><a routerLink="/fue-hair-transplant-in-gurgaon">FUE Hair Transplant</a></li>
+                                <li><a routerLink="/fut-hair-transplant-in-gurgaon">FUT Hair Transplant</a></li>
+                                <!-- <li><a routerLink="/hair-treatments/alopecia-areata-treatment-gurgaon">Alopecia Areata Treatment</a></li>
+                                <li><a routerLink="/hair-treatments">Hair Transplant</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/medical-facial">Medical Facial</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/aquajet-oxy-peel-facial-in-gurgaon">Aquajet Oxy Peel Facial</a></li>
+                                <!-- <li><a routerLink="/book-an-appointment">Miracle Facial</a></li> -->
+                                <li><a routerLink="/carbon-peels">Carbon Peel</a></li>
+                                <li><a routerLink="/chemical-peel-treatment-in-gurgaon">Chemical Peel</a></li>
+                                <li><a routerLink="/pumpkin-peel-facial-treatment-in-gurgaon">Pumpkin Peel Facial</a></li>
+                                <li><a routerLink="/oxygen-facial-treatment-in-gurgaon">The Oxygen Facial</a></li>
+                                <li><a routerLink="/tattva-miracle-therapy">Miracle Facial</a></li>
+                                <!--<li><a routerLink="/medical-facial/hydrafacial-in-gurgaon">Hydrafacial in Gurgaon</a></li> -->
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/skin-tightening-and-stretch-marks">Skin Tightening &amp; Stretch Marks</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Face Tightening</a> </li>
+                                <li><a routerLink="/stretch-marks-treatment-in-gurgaon">Stretch Marks Reduction</a></li>
+                                <li><a>HIFU</a></li>
+                                <!-- <li><a routerLink="/skin-tightening-and-stretch-marks/skin-tightening-treatment-in-gurgaon">Skin Tightening</a> </li> -->
+                            </ul>
+                        </li>
+
+
+
+                        <li class="has-child"><a>Skin Glow and Resurfacing</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Chemical Peel </a></li>
+                                <li><a>Mesoglow </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/skin-allergy">Skin Allergy</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/eczema-treatment-in-gurgaon">Eczema</a></li>
+                                <li><a routerLink="/urticaria-treatment-in-gurgaon">Urticaria</a></li>
+                                <li><a routerLink="/atopic-dermatitis-treatment-in-gurgaon">Atopic Dermatitis</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/infections">Infections</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a routerLink="/fungal-infections-treatment-in-gurgaon">Fungal Infection</a></li>
+                                <li><a>Viral Infection</a></li>
+                                <li><a>Bacterial Infection</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-child"><a routerLink="/bridal-dermatology">Bridal Dermatology</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Bridal Skin Care</a></li>
+                                <li><a>Groom Skin Care</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="has-child"><a routerLink="/dermato-surgery">Dermato Surgery</a>
+                            <ul (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                                <li><a>Mole &amp; Warts Removal</a></li>
+                                <li><a>Vitiligo</a></li>
+                            </ul>
+                        </li>
+                        <!--<li><a routerLink="/paediatric-dermatology">Paediatric Dermatology</a></li>
+                        <li><a routerLink="/ear-piercing-gurgaon">Ear Piercing</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/clinic-gallery">Gallery</a></li>
+                <li><a routerLink="/">Testimonials <i class="fa fa-chevron-down"></i></a>
+                    <ul class="autowidth" (click)="toggledropdown()" [class.menu-d-none]="dropdownstatus" public dropdownstatus:boolean=false;>
+                        <li><a routerLink="/testimonials">Written Testimonials</a></li>
+                        <!-- <li><a routerLink="/video-testimonial">Video Testimonials</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/blog">Blogs</a></li>
+                <li><a routerLink="/contact">Contact Us</a></li>
+                <li><a routerLink="/book-an-appointment">Request An Appointment</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!-- <p *ngIf="ishome">Home</p>
+<p *ngIf="!ishome">Not Home</p> -->

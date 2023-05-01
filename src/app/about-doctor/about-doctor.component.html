@@ -1,0 +1,116 @@
+<section class="commonwrap aboutcommon-wrap">
+    <picture>
+        <source media="(min-width:768px)" srcset="assets/images/aboutpage-doctor-bg.webp">
+        <source media="(min-width:320px)" srcset="assets/images/mobile-aboutpage-doctor-bg.webp">
+        <!-- <img src="assets/images/home-doctor-bg.webp" alt="Dr image" class="w-100"> -->
+        <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100" width="1500" height="auto"
+            [defaultImage]="defaultImage" [useSrcset]="true">
+    </picture>
+
+    <div class="bredcurmbborder">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bredcrumb">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                            <li><a>About Doctor</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div class="aboutdr-wrap">
+    <div class="container">
+        <div class="brifedr">
+            <div class="aboutdrheading commongold-heading">Dr. Niti Gaur </div>
+            <p class="education">MBBS, MD - Dermatology, Venereology & Leprosy Dermatologist,
+                Cosmetologist, Trichologist</p>
+            <h1 class="commonh1heading bdgurugram">Best Dermatologist in Gurgaon</h1>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="drmain-content">
+                    <p>Dr. Niti Gaur, MD, is the Medical Director and founder of Citrine Clinic os the <strong>best skin
+                            specialist in Gurgaon</strong>. Dr. Niti Gaur is a board-certified Dermatologist. She has
+                        done her MBBS and MD (Dermatology) from the country's premier institutes. She is an alumnus of B
+                        J Medical College, Pune and Lady Hardinge Medical College, New Delhi.</p>
+                    <p> She has more than 15 years of experience in the field of Clinical and Cosmetic Dermatology and
+                        Wellness. Post her MD, she has done her Senior Residency at Lady Hardinge Medical College, New
+                        Delhi. She has been trained in the best institutes in Europe, America and Singapore. She was a
+                        Senior Consultant Dermatologist at Kaya Skin Clinic and various other hospitals in Gurgaon
+                        before starting her dream work, “Citrine Clinic”. She has several research publications to her
+                        credit.</p>
+                    <p>The <strong>best dermatologist in Gurgaon</strong>, Dr. Niti Gaur is extremely passionate about
+                        her work. She regularly attends national and international conferences and workshops to keep
+                        up-to-date with the latest treatment protocols and technologies.
+                    </p>
+                    <p>An esteemed member of various national and international Dermatology associations, she ensures
+                        the latest and best US FDA-approved treatments and technologies are available at her clinic. She
+                        is a medical trainer for anti-wrinkle injections, fillers, threads and lasers.</p>
+                    <p>Dr Niti Gaur started Citrine Clinic with the aim of offering the best treatments in Dermatology,
+                        Aesthetics and Wellness. She has innumerable satisfied clients who vouch for her high ethics,
+                        compassionate nature and results.</p>
+                    <p>The dedication of our <strong>best skin doctor in Gurgaon</strong>, Dr. Niti Gaur has allowed
+                        Citrine Clinic to develop into the best State of Art Dermatology and Wellness clinic in Gurgaon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="expandplace">
+    <app-mobile-abouteducation></app-mobile-abouteducation>
+    <app-desktop-about-education></app-desktop-about-education>
+</div> -->
+<div class="philosophy-wrap">
+    <div class="container">
+        <div class="philosophy-heading commongold-heading">Philosophy</div>
+        <div class="row">
+            <div class="col-12">
+                <div class="philosophy-content">
+                    <p>Citrine Clinics is not simply another website for a skin clinic. Dr. Niti Gaur started Citrine
+                        Clinic to transform the field of aesthetics and dermatology. Dr. Niti Gaur's mission is to
+                        educate patients worldwide about their skin and hair issues and to encourage them to comprehend
+                        the treatments they may be experiencing. Dr. Niti Gaur believes in treating the individual, not
+                        just the symptom. She likes establishing a connection with her patients, a pleasant
+                        doctor-patient relationship. They are listened to, their questions are answered, they are
+                        assisted in making an informed decision about their therapy, and finally, they are successfully
+                        treated. I believe in providing my patients with the most modern and effective skin and hair
+                        treatments accessible worldwide. Patented research goods and skincare brands with a solid
+                        research foundation aid in reaching the required effects in a safe, rapid, and efficient manner.
+                        Welcome to my realm of beauty attained by cutting-edge scientific research. Welcome to Citrine
+                        Clinic to make the journey toward beauty successful!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="choose-dr">
+    <app-about-choose-doctor></app-about-choose-doctor>
+    <app-desktop-about-choose-dr></app-desktop-about-choose-dr>
+</div>
+<!-- <app-about-videos></app-about-videos> -->
+<div class="about-sr">
+    <!-- <app-about-mobile-service></app-about-mobile-service> -->
+    <app-mobile-carousel></app-mobile-carousel>
+</div>
+<div class="about-testimonial-wrap">
+    <div class="abouttestimonialheading commongold-heading">Patient Testimonials</div>
+    <app-desktop-testimonial></app-desktop-testimonial>
+    <app-mobile-home-testimonial></app-mobile-home-testimonial>
+    <div class="abouttestimonialexplorebutton common-button for-desktop">
+        <a routerLink="/testimonials">Explore More</a>
+    </div>
+    <div class="abouttestimonialexplorebutton common-button for-mobile">
+        <a routerLink="/testimonials">View All</a>
+    </div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

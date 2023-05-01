@@ -1,0 +1,42 @@
+<section class="commonwrap">
+    <img class="w-100" [lazyLoad]="bgimageurlBnr+cat?.banner_image" [defaultImage]="defaultImage" [useSrcset]="true" alt="Citrine" class="w-100" >
+<!-- <div class="banner-heading for-mobile">Services</div> -->
+<div class="bredcurmbborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bredcrumb">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/services">Services</a></li>
+                        <li><a>{{cat?.service_name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+
+<section id="TreatmentCategories">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4 makesomecoustem" *ngFor="let ser of service">
+                <div class="maincatwrap">
+                    <a routerLink="/{{ser.url}}" class="maincatlink">
+                        <div class="skinimgwrap">
+                            <!-- <img src="{{bgimageurl+ser?.service_image}}" class="img-fluid"> -->
+                            <img class="w-100" [lazyLoad]="bgimageurl+ser?.service_image" [defaultImage]="defaultImage1" [useSrcset]="true" alt="Citrine" class="w-100" >
+                            <p>{{ ser.name_desc }}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+<app-desktop-appointment></app-desktop-appointment>

@@ -1,0 +1,47 @@
+<section class="homedrbg">
+    <!-- <img [lazyLoad]="image3" class="w-100"> -->
+    <picture>
+        <source media="(min-width:768px)" srcset="assets/images/home-doctor-bg.webp">
+        <source media="(min-width:320px)" srcset="assets/images/mobile-aboutpage-doctor-bg.webp">
+        <!-- <img src="assets/images/home-doctor-bg.webp" alt="Dr image" class="w-100"> -->
+        <img class="w-100" [lazyLoad]="image3" alt="Dr image" class="w-100" width="1500" height="auto"
+            [defaultImage]="defaultImage" [useSrcset]="true">
+    </picture>
+    <div class="container-fluid managehomedrbg">
+        <div class="container-max">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6"></div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="homedr-discription">
+                        <div class="homedrqulification-wrap">
+                            <div class="homedrheading commongold-heading">Dr. Niti Gaur</div>
+                            <p>MBBS, MD - Dermatology , Venereology & Leprosy <span>Dermatologist, Cosmetologist,
+                                    Trichologist</span>
+                            </p>
+                        </div>
+                        <div class="homedrdetail">
+                            <p>Dr. Niti Gaur, MD, is the Medical Director and founder of Citrine Clinic os the
+                                <strong>best skin specialist in Gurgaon</strong>. Dr. Niti Gaur is a board-certified
+                                Dermatologist. She has done her MBBS and MD (Dermatology) from the country's premier
+                                institutes. She is an alumnus of B J Medical College, Pune and Lady Hardinge Medical
+                                College, New Delhi.</p>
+                        </div>
+                        <div class="buttongroup common-button">
+                            <a routerLink="/dermatologist-in-gurgaon">Read More</a>
+                            <a routerLink="/book-an-appointment">Request An Appointment</a>
+                        </div>
+                        <div class="membershipwrap">
+                            <div class="membershipheading commongold-heading">Memberships</div>
+                            <ul>
+                                <li><img [lazyLoad]="image4"></li>
+                                <li><img [lazyLoad]="image5"></li>
+                                <li><img [lazyLoad]="image6"></li>
+                                <li><img [lazyLoad]="image7"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

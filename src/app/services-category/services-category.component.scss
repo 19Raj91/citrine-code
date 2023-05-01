@@ -1,0 +1,76 @@
+#TreatmentCategories {
+    margin: 50px 0px;
+
+    .makesomecoustem {
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        .maincatwrap {
+            .maincatlink {
+                transition: .5s;
+
+                .skinimgwrap {
+                    img {
+                        width: 100%;
+                    }
+
+                    p {
+                        background-color: #DB9200;
+                        color: #fff;
+                        text-align: center;
+                        padding: 10px;
+                        font-size: 20px;
+                        margin-top: 10px;
+
+                    }
+                }
+
+                &:hover {
+                    .skinimgwrap {
+                        p {
+                            background-color: #000;
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .commonwrap {
+        padding: 0px 0px;
+
+        .bredcrumb {
+            // position: absolute;
+            // bottom: 10px;
+            // left: 10px;
+            // border: 0px;
+
+            ul {
+
+                li {
+                    border-right: 2px solid #ccc;
+
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .commonwrap .banner-heading {
+            font-size: 16px;
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+            position: absolute;
+            top: 45%;
+            left: 10px;
+        }
+    }
+
+}

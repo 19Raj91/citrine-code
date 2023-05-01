@@ -1,0 +1,297 @@
+p{
+    font-weight: 200;
+}
+.homedrbg {
+    position: relative;
+    margin-top: 10px;
+    background-color: #252525;
+
+    .managehomedrbg {
+        position: static;
+
+        .homedr-discription {
+            .homedrqulification-wrap {
+                color: #fff;
+                text-align: center;
+
+                .homedrheading {
+                    // color: #DB9200;
+                    font-size: 24px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    // margin-bottom: 10px;
+                }
+            }
+
+            .homedrdetail {
+                color: #fff;
+                margin-top: 10px;
+
+                p {
+                    line-height: 24px;
+                    text-align: center;
+                }
+
+            }
+
+            .buttongroup {
+                text-align: center;
+                margin-top: 20px;
+
+                a {
+                    display: inline-block;
+                    border: 1px solid #DB9200;
+                    padding: 12px 20px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 14px;
+
+                    &:last-child {
+                        margin-left: 20px;
+                        background: linear-gradient(113deg, #CD8C36, #EEDA7C, #CD8C36,#FED782,#CD8C36);font-weight: 500;
+                        border-radius: 10px;
+                        display: none;
+                        color: #000;
+                    }
+                }
+
+            }
+
+            .membershipwrap {
+                margin-top: 0px;
+                padding: 20px 0px;
+                text-align: center;
+
+                .membershipheading {
+                    // color: #DB9200;
+                    font-size: 24px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    line-height: 1;
+                    margin-bottom: 30px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    overflow-x: scroll;
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+
+                    li {
+                        margin-right: 20px;
+
+                        img {
+                            width: 110px;
+                        }
+
+                        &:last-child {
+                            margin-right: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .homedrbg {
+        position: relative;
+        margin-top: 50px;
+
+        .managehomedrbg {
+            position: absolute;
+            top: 50px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1369px) {
+        .homedrbg {
+            position: relative;
+            margin-top: 50px;
+
+            .managehomedrbg {
+                position: absolute;
+                top: 40px;
+
+                .homedr-discription {
+                    .homedrqulification-wrap {
+                        text-align: left;
+
+
+                        .homedrheading {
+                            color: #DB9200;
+                            font-size: 40px;
+                            // font-family: "DM Serif Display", serif;
+                            font-family: 'Poppins', sans-serif;
+                            text-align: left;
+                        }
+
+                        p {
+                            line-height: 1.2;
+
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .homedrdetail {
+                        color: #fff;
+
+                        p {
+                            text-align: left;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .buttongroup {
+                        margin-top: 20px;
+                        text-align: left;
+
+                        a {
+                            padding: 10px 20px;
+                            font-weight: normal;
+                            font-size: 16px;
+
+                            &:last-child {
+                                display: inline-block;
+                            }
+                        }
+
+                    }
+
+                    .membershipwrap {
+                        border-top: 1px dotted #fff;
+                        border-bottom: 1px dotted #fff;
+                        margin-top: 40px;
+                        padding: 20px 0px;
+                        text-align: left;
+
+                        .membershipheading {
+                            color: #DB9200;
+                            font-size: 40px;
+                            // font-family: "DM Serif Display", serif;
+                            font-family: 'Poppins', sans-serif;
+                            line-height: 1;
+                            margin-bottom: 40px;
+                        }
+
+                        ul {
+                            justify-content: start;
+                            overflow: hidden;
+
+                            li {
+                                margin-right: 50px;
+
+                                img {
+                                    width: 100px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+
+}
+
+@media(min-width:1371px) {
+    .homedrbg {
+        position: relative;
+        margin-top: 50px;
+
+        .managehomedrbg {
+            position: absolute;
+            top: 80px;
+
+            .homedr-discription {
+                .homedrqulification-wrap {
+                    text-align: left;
+
+
+                    .homedrheading {
+                        // color: #DB9200;
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        text-align: left;
+                    }
+
+                    p {
+                        line-height: 30px;
+
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+
+                .homedrdetail {
+                    color: #fff;
+
+                    p {
+                        text-align: left;
+                        line-height: 30px;
+                    }
+                }
+
+                .buttongroup {
+                    margin-top: 40px;
+                    text-align: left;
+
+                    a {
+                        padding: 10px 20px;
+                        font-weight: normal;
+                        font-size: 16px;
+
+                        &:last-child {
+                            display: inline-block;
+                        }
+                    }
+
+                }
+
+                .membershipwrap {
+                    border-top: 1px dotted #fff;
+                    border-bottom: 1px dotted #fff;
+                    margin-top: 60px;
+                    padding: 40px 0px;
+                    text-align: left;
+
+                    .membershipheading {
+                        // color: #DB9200;
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        line-height: 1;
+                        margin-bottom: 40px;
+                    }
+
+                    ul {
+                        justify-content: start;
+                        overflow-x: hidden;
+
+                        li {
+                            margin-right: 50px;
+
+                            img {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

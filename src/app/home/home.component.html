@@ -1,0 +1,231 @@
+<!-- <section class="webbanner" (click)="clickEvent()" [ngClass]="imagedisplay ? 'imagedisplay-block' : 'imagedisplay-none'"></section> -->
+<section class="webbanner">
+    <!-- <img src="assets/images/home-web-banner.webp" class="img-fluid"> -->
+    <img class="w-100" src="assets/images/home-web-banner.webp" height="" width="">
+    <div class="container custom-add">
+        <div class="row">
+            <div class="col-12 col-lg-6"></div>
+            <div class="col-12 col-lg-6">
+                <div class="homwebheading p-4">
+                    Become Art. <span>Live Beautifully.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div class="service-slide">
+    <!-- <app-mobile-home-service></app-mobile-home-service> -->
+    <!-- <app-about-mobile-service></app-about-mobile-service> -->
+    <!-- <app-mobile-carousel></app-mobile-carousel> -->
+</div>
+<app-mobile-carousel></app-mobile-carousel>
+<section class="homeaboutwrap">
+    <div class="container-fluid">
+        <div class="container-max">
+            <div class="row manage-homeaboutwrap">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                    <div class="homeaboutcitrine">
+                        <div class="homeaboutheading commongold-heading">About Citrine Clinic</div>
+                        <p>Dr. Niti Gaur has set up Citrine Clinic and Aesthetics to provide the highest quality of
+                            skin care with the transparent and ethical practices of dermatology. At the clinic,
+                            you will experience the best skincare with a beautiful blend of clinical dermatology &
+                            modern cosmetic innovation while adhering to an uncompromising code of ethical standards
+                            of medical care.The clinic is supervised under the guidance of Dr. Niti and is equipped with
+                            advanced services making it the Best Skin Clinic in Gurgaon. It is Dr. Niti Gaur's quench
+                            for
+                            knowledge & desire to provide the best to her patients which compels her to regularly attend
+                            various national & international conferences & workshops to remain up to date with the
+                            recent
+                            most advances in dermatology. Dr. Niti Gaur believes in establishing trust through honesty &
+                            transparency.
+                            It is her care & empathy which put all patients at ease within minutes</p>
+                        <div class="readmore common-button">
+                            <a routerLink="/skin-clinic-in-gurgaon">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+
+                    <div class="homeclinicimage for-desktop">
+                        <img [lazyLoad]="image2" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-mobile-home-dr></app-mobile-home-dr>
+
+<section class="homedermafiller">
+    <div class="treatheading for-desktop">Treat your flaws & meet the transformed<span> new you at Citrine Clinic</span>
+    </div>
+    <!-- <div class="service-slide">
+        <app-mobile-home-service></app-mobile-home-service>
+        <app-about-mobile-service></app-about-mobile-service>
+    </div> -->
+    <div class="textonimagewrap for-desktop">
+        <img [lazyLoad]="image8" class="w-100">
+        <div class="managehomedermafiller">
+            <div class="fordark-bg">
+                <div class="homdermawrapper">
+                    <div class="homedermafillerheading commongold-heading">
+                        Dermal Fillers
+                    </div>
+                    <p>Hearing "You look tired!" even when you are not is one of the most
+                        unsatisfactory remarks one can hear. Aging is a natural coarse of
+                        action and affects one and all but, surrendering to it.</p>
+                    <p>
+                        At Citrine Clinic, we offer a wide range of anti-aging treatments designed to
+                        provide a youthful and rejuvenated appearance. Out of many, dermal
+                        fillers is the most popular anti-aging treatment preferred by both
+                        men and women around the world.</p>
+                    <div class="explore common-button">
+                        <a routerLink="/dermal-fillers-treatment-in-gurgaon">Read More</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <section id="four-services">
+<app-home-short-services></app-home-short-services>
+</section> -->
+
+<section class="laser-toningwrapper for-desktop">
+    <img [lazyLoad]="image9" class="w-100">
+    <div class="laser-textwrap">
+        <div class="laser-text">
+            <div class="laser-heading commongold-heading">
+                Laser Toning
+            </div>
+            <p>Dr Niti Gaur at Citrine Clinic caters to every person for laser hair
+                removal in Gurgaon by reducing the fertility and capacity of the hair
+                follicles to regrow. In subsequent sessions, the hair growth is drastically
+                reduced with a soft and smooth skin appearance.</p>
+            <p>Management of body hair is a
+                distressing task. One can easily get sick of traditional methods of removing
+                it temporarily and rather opt for a permanent way out. A hair-free and smooth
+                skin is desired by all. People often opt for quicker methods of hair removal
+                like shaving and waxing, but these are just temporary solutions.</p>
+            <div class="explorelaser common-button">
+                <a routerLink="/laser-toning-in-gurgaon">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="acneacarmainwrap for-desktop">
+    <img [lazyLoad]="image10" class="w-100">
+    <div class="acnescarwrap">
+        <div class="acnescartextwrap">
+            <div class="acne-heading commongold-heading">Acne & Scar</div>
+            <p>Acne & scars are one of the most prevalent dermatological concerns, as they are
+                the marks left on the skin as a result of incorrect treatment of inflamed acne lesions.
+                They are visual reminders of past acne outbreaks, which can have a significant emotional impact.
+                Acne affects most adolescents and young adults at some time in their life, and one in every five
+                acne patients develops scarring. The good news is that not all acne scars are permanent; even if
+                they are, some treatments can nearly eliminate them or help the skin heal with its collagen.
+                Dr. Niti Gaur, an acne specialist in Gurgaon, offers the best treatments for managing acne scars and offers
+                 one with an improved look, a boost in self-confidence and self-esteem, a better and healthy skin.</p>
+            <div class="acnelink-1">
+                <ul>
+                    <li><a routerLink="/acne-treatment-in-gurgaon">ACNE</a></li>
+                    <li><a routerLink="/acne-scars">OPEN PORES</a></li>
+                    <li><a routerLink="/laser-resurfacing-in-gurgaon">LASER RESURFACING</a></li>
+                    <li><a routerLink="/acne-scar-treatment-in-gurgaon">SCARS</a></li>
+                </ul>
+            </div>
+            <div class="acnelink-2">
+                <ul>
+                    <li><a routerLink="/acne-scars">ACNE SCAR REDUCTION</a></li>
+                    <li><a routerLink="/skin-resurfacing-treatment-in-gurgaon">SKIN RESURFACING</a></li>
+                    <li><a routerLink="/acne-scars">MNRF</a></li>
+                </ul>
+            </div>
+            <div class="acneexplore common-button">
+                <a routerLink="/acne-scars">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="maincombindwrap for-desktop">
+    <!-- <div class="combind-logo">
+        <img [lazyLoad]="image13">
+    </div> -->
+    <div class="combindwrap">
+        <div class="left-combindwrap">
+            <img [lazyLoad]="image11" class="w-100">
+            <div class="leftcombind">
+                <div class="left-combindheading commongold-heading">Laser Hair <span>Reduction</span></div>
+                <p>Laser hair reduction is a minimally invasive aesthetic treatment offered by Dr. Niti Gaur at Citrine Clinic to remove unwanted extra facial and body hair. It is one of the most effective methods for preventing hair growth by destroying specific hair follicles using focused laser light and frequency of heat.</p>
+                <div class="leftcombindexplore common-button">
+                    <a routerLink="/laser-hair-removal-in-gurgaon">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="right-combindwrap">
+            <img [lazyLoad]="image12" class="w-100">
+            <div class="rightcombind">
+                <div class="right-combindheading commongold-heading">Growth Factor <span> Concentrate</span></div>
+                <p>Individuals experiencing early baldness or alopecia may benefit from Growth Factor Concentrate Treatment for hair loss at Citrine Clinic. It is a cutting-edge treatment in the field of cosmetology that generates exceptional results for those suffering from the persistent problem of hair loss a. It promotes natural hair regeneration by replenishing the scalp's growth nutrients, reverses baldness, and helping one get healthy and radiant hair growth.</p>
+                <div class="rightcombindexplore common-button">
+                    <a routerLink="/growth-factor-injection">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="medical-dermatology for-desktop">
+    <img [lazyLoad]="image14" class="w-100">
+    <div class="medical-wrap">
+        <div class="medicaltext-wrap">
+            <div class="medical-dermatologyheading commongold-heading">General <span> Dermatology</span></div>
+            <p>Dr. Niti Gaur is an accomplished dermatologist who specializes in the treatment of hair, skin, nails, and mouth. She is a specially-trained physician who treats thousands of unusual and common skin problems for patients of all ages. Dermatologists' specialized abilities to address common diseases such as pigmentation and acne. She also provides cosmetic services, like face fillers and chemical peels, to modify or enhance the appearance of a physical feature.</p>
+
+            <ul>
+                <li><a routerLink="/fairness-and-pigmentation">PIGMENTATION</a></li>
+                <li><a routerLink="/hair-treatments">HAIR FALL</a></li>
+                <li><a routerLink="/aging-skin">AGING SKIN</a></li>
+                <li><a routerLink="/dark-circles-treatment-gurgaon">DARK CIRCLES</a></li>
+            </ul>
+            <div class="medical-explore common-button">
+                <a routerLink="/medical-facial">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-hydarfacial for-desktop">
+    <img [lazyLoad]="image15" class="w-100">
+    <div class="haydrafaical-wrap">
+        <div class="hydrafacial-text-wrap">
+            <div class="hydrafacial-heading commongold-heading">Hydrafacial</div>
+            <p>Try HydraFacial if you are searching for a quick, non-invasive solution that provides instant results. It gives a 3-in-1 skincare treatment for skin that is thoroughly cleansed, moisturized, and revitalized. There is no downtime, and the results are immediate. Smooth, luminous skin reflects health and beauty and enhances one's self-assurance.</p>
+            <div class="hydra-explore common-button">
+                <a routerLink="/hydrafacial-in-gurgaon">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<app-desktop-tech-section></app-desktop-tech-section>
+<div class="home-testimonial-wrap">
+    <div class="hometestimonialheading commongold-heading">Patient Testimonials</div>
+    <app-desktop-testimonial></app-desktop-testimonial>
+    <app-mobile-home-testimonial></app-mobile-home-testimonial>
+    <div class="hometestimonialexplorebutton common-button for-desktop">
+        <a routerLink="/testimonials">Explore More</a>
+    </div>
+    <div class="hometestimonialexplorebutton common-button for-mobile">
+        <a routerLink="/testimonials">View All</a>
+    </div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

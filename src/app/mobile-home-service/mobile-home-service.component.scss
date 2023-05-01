@@ -1,0 +1,55 @@
+.mobile-services-wrap {
+    background-color: #4A4A4A;
+    padding: 20px 0px;
+
+    .mobileservices-heading {
+        font-size: 40px;
+        // font-family: "DM Serif Display", serif;
+        font-family: 'Poppins', sans-serif;
+        margin-bottom: 20px;
+        background: transparent linear-gradient(126deg, #F8D905 0%, #E4A52D 7%, #E9BA5F 22%, #A3700F 95%, #F8D905 100%) 0% 0% no-repeat padding-box;
+        color: transparent;
+        -webkit-background-clip: text;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .for-mobileslide {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        .mobile-slide {
+            width: 60%;
+
+            .mobileserviceimage {
+                display: block;
+                text-align: center;
+
+                p {
+                    font-size: 20px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    color: #fff;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.for-mobileslide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.for-mobileslide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+

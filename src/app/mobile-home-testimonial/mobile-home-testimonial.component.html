@@ -1,0 +1,67 @@
+<section class="mobile-testimonialwrap for-mobile">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 no-padding">
+                <div class="moreabout-image">
+                    <!-- <img src="assets/images/skinlogics-noida.jpg" alt="Skinlogics" class="w-100"> -->
+                    <div id="homepage-slider" class="st-slider">
+                        <input type="radio" class="cs_anchor radio playbuttonradio" name="slider" id="slide1"
+                             />
+                        <input type="radio" class="cs_anchor radio playbuttonradio" name="slider" id="slide2"
+                            />
+                        <input type="radio" class="cs_anchor radio playbuttonradio" name="slider" id="slide3"
+                             />
+                        <input type="radio" class="cs_anchor radio playbuttonradio" name="slider" id="play1"
+                            checked="" />
+
+                        <div class="images">
+                            <div class="images-inner">
+                                <div class="image-slide" *ngFor="let testi of testimonials">
+                                    <div class="image bg-yellow">
+                                        <div class="testimonial-contentwrap">
+                                            <div class="nameandothergroupwrap">
+                                                <div class="nameandothergroup">
+                                                    <div class="clientname">{{ testi.name }}</div>
+                                                    <div class="rating-group">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="review-image">
+                                                  <img [lazyLoad]="image55" [defaultImage]="defaultImage" class="img-fluid" width="80" height="19"
+                                                  alt="Practo" *ngIf="testi.source == 'practo'" />
+                                                <img [lazyLoad]="image1016" [defaultImage]="defaultImage" class="img-fluid" alt="google"
+                                                  *ngIf="testi.source == 'google'" />
+                                                <img [lazyLoad]="image1017" [defaultImage]="defaultImage" class="img-fluid" alt="lybrate"
+                                                  *ngIf="testi.source == 'lybrate'" />
+                                                <img [lazyLoad]="image1018" [defaultImage]="defaultImage" class="img-fluid" alt="justdial"
+                                                  *ngIf="testi.source == 'justdial'" />
+                                                </div>
+                                            </div>
+                                            <div class="review-content">
+                                                <p [innerHTML]="testi.description"></p>
+                                            </div>
+                                            <p class="text-center mt-3" style="font-size: 12px;">✱ Opinions/Results may
+                                                vary from person to person.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="labels">
+                            <div class="fake-radio">
+                                <label for="slide1" class="radio-btn"></label>
+                                <label for="slide2" class="radio-btn"></label>
+                                <label for="slide3" class="radio-btn"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

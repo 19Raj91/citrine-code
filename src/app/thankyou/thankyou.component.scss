@@ -1,0 +1,122 @@
+#thankyoupage {
+    padding: 50px 0px;
+
+    .thankyoucontentwrap {
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        padding: 50px 20px;
+
+        .checksign {
+            text-align: center;
+            height: 70px;
+            width: 70px;
+            margin: 0 auto;
+            border: 1px solid #DB9200;
+            ;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-size: 40px;
+                color: #DB9200;
+            }
+        }
+
+        .thankyouheading {
+            font-size: 70px;
+            text-align: center;
+            color: #DB9200;
+            line-height: 1;
+            font-weight: bold;
+            margin: 10px 0px;
+        }
+
+        .thankyoutext {
+            font-size: 20px;
+            text-align: center;
+        }
+        .backtohome{
+            text-align: center;
+            a{
+                display: inline-block;
+                background-color: #DB9200;
+                color: #fff;
+                padding: 4px 20px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+
+@media(min-width:992px) {
+    #thankyoupage {
+        padding: 150px 0px;
+
+        .thankyoucontentwrap {
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+            .checksign {
+                text-align: center;
+                height: 70px;
+                width: 70px;
+                margin: 0 auto;
+                border: 1px solid #DB9200;
+                ;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                span {
+                    font-size: 40px;
+                    color: #DB9200;
+                }
+            }
+
+            .thankyouheading {
+                font-size: 70px;
+                text-align: center;
+                color: #DB9200;
+                line-height: 1;
+                font-weight: bold;
+                margin: 30px 0px;
+            }
+
+            .thankyoutext {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    #thankyoupage {
+
+        .thankyoucontentwrap {
+
+            .checksign {
+                height: 60px;
+                width: 60px;
+
+                span {
+                    font-size: 30px;
+                }
+            }
+
+            .thankyouheading {
+                font-size: 30px;
+            }
+
+            .thankyoutext {
+                font-size: 16px;
+            }
+        }
+    }
+}

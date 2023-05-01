@@ -1,0 +1,186 @@
+<section class="commonwrap services-common">
+    <img class="w-100" [lazyLoad]="bgimageurlBnr+service?.service_banner_image" alt="{{ service?.alt_tag }}" [defaultImage]="defaultImage" [useSrcset]="true" class="w-100">
+    <!-- <div class="banner-heading for-mobile ">{{ service?.name_desc }}</div> -->
+    <!-- <div class="banner-heading ">{{ service?.name_desc }}</div> -->
+<div class="bredcurmbborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bredcrumb">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/services">Services</a></li>
+                        <li><a routerLink="/{{ cat_url }}">{{ cat }}</a></li>
+                        <li><a>{{ service?.name_desc }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+
+<div class="fulltext common-listyle mb-5">
+    <div class="container">
+        <h1 class="fulltext-heading services-common-heading first-heading">{{ service?.service_name }}</h1>
+        <div class="row">
+            <div class="col-12 col-lg-12" [innerHTML]="service?.description">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let sec of section">
+  <div class="fulltext common-listyle {{ sec.class_add }}" *ngIf="sec.type === 'fulltext'">
+    <div class="container">
+          <!--tag rendering-->
+          <div *ngIf="sec.heading_tag!=null" class="fulltext-heading services-common-heading ">
+            <h1 *ngIf="sec.heading_tag=='h1'">{{sec.section_heading}}</h1>
+            <h2 *ngIf="sec.heading_tag=='h2'">{{sec.section_heading}}</h2>
+            <h3 *ngIf="sec.heading_tag=='h3'">{{sec.section_heading}}</h3>
+            <h4 *ngIf="sec.heading_tag=='h4'">{{sec.section_heading}}</h4>
+            <p *ngIf="sec.heading_tag=='p'">{{sec.section_heading}}</p>
+            <div *ngIf="sec.heading_tag=='div'">{{sec.section_heading}}</div>
+       </div>
+       <div *ngIf="!sec.heading_tag && sec.section_heading" class="fulltext-heading services-common-heading">
+             {{sec.section_heading}}
+       </div>
+       <!--end of tag Rendering-->
+
+        <!-- <div class="fulltext-heading services-common-heading ">{{ sec.section_heading }}</div> -->
+        <div class="row">
+            <div class="col-12 col-lg-12" [innerHTML]="sec.section1">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="leftheading-righttext {{ sec.class_add }}" *ngIf="sec.type === 'leftheading'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                 <!--tag rendering-->
+                    <div *ngIf="sec.heading_tag!=null" class="left-heading services-common-heading">
+                        <h1 *ngIf="sec.heading_tag=='h1'">{{sec.section_heading}}</h1>
+                        <h2 *ngIf="sec.heading_tag=='h2'">{{sec.section_heading}}</h2>
+                        <h3 *ngIf="sec.heading_tag=='h3'">{{sec.section_heading}}</h3>
+                        <h4 *ngIf="sec.heading_tag=='h4'">{{sec.section_heading}}</h4>
+                        <p *ngIf="sec.heading_tag=='p'">{{sec.section_heading}}</p>
+                        <div *ngIf="sec.heading_tag=='div'">{{sec.section_heading}}</div>
+                </div>
+                <div *ngIf="!sec.heading_tag && sec.section_heading" class="left-heading services-common-heading">
+                    {{sec.section_heading}}
+                </div>
+                <!--end of tag Rendering-->
+                <!-- <div class="left-heading services-common-heading">{{ sec?.section_heading }}</div> -->
+            </div>
+            <div class="col-12 col-lg-6" [innerHTML]="sec?.section1"></div>
+        </div>
+    </div>
+</div>
+
+<div class="smallpointers-wrap {{ sec.class_add }}" *ngIf="sec.type === 'twoparagraphdifflayout'">
+    <div class="container">
+         <!--tag rendering-->
+         <div *ngIf="sec.heading_tag!=null" class="smallpointer-heading services-common-heading">
+            <h1 *ngIf="sec.heading_tag=='h1'">{{sec.section_heading}}</h1>
+            <h2 *ngIf="sec.heading_tag=='h2'">{{sec.section_heading}}</h2>
+            <h3 *ngIf="sec.heading_tag=='h3'">{{sec.section_heading}}</h3>
+            <h4 *ngIf="sec.heading_tag=='h4'">{{sec.section_heading}}</h4>
+            <p *ngIf="sec.heading_tag=='p'">{{sec.section_heading}}</p>
+            <div *ngIf="sec.heading_tag=='div'">{{sec.section_heading}}</div>
+    </div>
+    <div *ngIf="!sec.heading_tag && sec.section_heading" class="smallpointer-heading services-common-heading">
+       {{sec.section_heading}}
+    </div>
+    <!--end of tag Rendering-->
+        <!-- <div class="smallpointer-heading services-common-heading">{{ sec.section_heading }}</div> -->
+        <div class="smallpointer-subheading" [innerHTML]="sec.service_comman"></div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="left-pointer common-listyle" [innerHTML]="sec.section1">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="right-pointer common-listyle" [innerHTML]="sec.section2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="leftimage-righttext {{ sec.class_add }}" *ngIf="sec.type === 'imagetext'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="leftimage">
+                    <img class="w-100" [lazyLoad]="bgimageurl+sec?.image" alt="Dr image" class="w-100">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                 <!--tag rendering-->
+                    <div *ngIf="sec.heading_tag!=null" class="image-heading services-common-heading">
+                        <h1 *ngIf="sec.heading_tag=='h1'">{{sec.section_heading}}</h1>
+                        <h2 *ngIf="sec.heading_tag=='h2'">{{sec.section_heading}}</h2>
+                        <h3 *ngIf="sec.heading_tag=='h3'">{{sec.section_heading}}</h3>
+                        <h4 *ngIf="sec.heading_tag=='h4'">{{sec.section_heading}}</h4>
+                        <p *ngIf="sec.heading_tag=='p'">{{sec.section_heading}}</p>
+                        <div *ngIf="sec.heading_tag=='div'">{{sec.section_heading}}</div>
+                </div>
+                <div *ngIf="!sec.heading_tag && sec.section_heading" class="image-heading services-common-heading">
+                    {{sec.section_heading}}
+                </div>
+                <!--end of tag Rendering-->
+                <!-- <div class="image-heading services-common-heading">{{ sec?.section_heading }}</div> -->
+                <p [innerHTML]="sec?.section1"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bothside-heading {{ sec.class_add }}" *ngIf="sec.type === 'twoparagraph'">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="bothside-leftheading services-common-heading">{{ sec.service_heading }}</div>
+                <p  [innerHTML]="sec.section1"></p>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="bothside-rightheading services-common-heading">{{ sec.service_heading1 }}</div>
+                <p [innerHTML]="sec.section2"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="three-paragraph {{ sec.class_add }}" *ngIf="sec.type === 'threeparagraph'">
+    <div class="container">
+        <!--tag rendering-->
+        <div *ngIf="sec.heading_tag!=null" class="three-paramainheading services-common-heading">
+            <h1 *ngIf="sec.heading_tag=='h1'">{{sec.section_heading}}</h1>
+            <h2 *ngIf="sec.heading_tag=='h2'">{{sec.section_heading}}</h2>
+            <h3 *ngIf="sec.heading_tag=='h3'">{{sec.section_heading}}</h3>
+            <h4 *ngIf="sec.heading_tag=='h4'">{{sec.section_heading}}</h4>
+            <p *ngIf="sec.heading_tag=='p'">{{sec.section_heading}}</p>
+            <div *ngIf="sec.heading_tag=='div'">{{sec.section_heading}}</div>
+    </div>
+    <div *ngIf="!sec.heading_tag && sec.section_heading" class="three-paramainheading services-common-heading">
+        {{sec.section_heading}}
+    </div>
+    <!--end of tag Rendering-->
+        <!-- <div class="three-paramainheading services-common-heading">{{ sec.section_heading }}</div> -->
+        <div class="three-parasubheading " [innerHTML]="sec.service_heading"></div>
+        <div class="row">
+            <div class="col-12 col-lg-4" *ngFor="let three of sec.threepragraph.threeparagraphdata; let i = index ;">
+                <div class="three-paraheading services-common-heading">{{sec.threepragraph?.sec_heading[i]}}</div>
+                <p [innerHTML]="three"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+<app-desktop-appointment></app-desktop-appointment>

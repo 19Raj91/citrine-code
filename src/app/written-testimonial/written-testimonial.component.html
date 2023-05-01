@@ -1,0 +1,71 @@
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage" [useSrcset]="true">
+    <div class="banner-heading for-mobile">Written Testimonials</div>
+    <div class="banner-heading for-desktop">Written Testimonials</div>
+
+<div class="bredcurmbborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bredcrumb">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a>Written Testimonials</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div class="desktop-testimonialwrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let testi of testimonial | paginate: { itemsPerPage: 6, currentPage: p }">
+                <div class="testimonial-contentwrap">
+                    <div class="nameandothergroupwrap">
+                        <div class="nameandothergroup">
+                            <div class="clientname">{{ testi.name }}</div>
+                            <div class="rating-group">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-image">
+                          <img src="assets/images/practo.jpg" class="img-fluid" alt="practo"
+                            *ngIf="testi.source == 'practo'" />
+                          <img src="assets/images/google.jpg" class="img-fluid" alt="google"
+                            *ngIf="testi.source == 'google'" />
+                          <img src="" class="img-fluid" alt="lybrate"
+                            *ngIf="testi.source == 'lybrate'" />
+                          <img src="" class="img-fluid" alt="Justdial"
+                            *ngIf="testi.source == 'lybrate'" />
+                        </div>
+                    </div>
+                    <div class="review-content" [innerHTML]="testi.description">
+                    </div>
+                    <p class="text-center mt-3" style="font-size: 12px;">✱ Opinions/Results may
+                        vary from person to person.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <div class="paginationlist">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>
+
+

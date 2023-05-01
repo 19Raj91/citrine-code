@@ -1,0 +1,96 @@
+<div class="cliktoopennumber for-mobile" clickOutside (clickOutside)="clickedOutside()">
+    <div class="callnumberwrap" (click)="toggleMenu()">
+        <img src="assets/images/cta/phone-white.png" class="realcolo2" alt="callimage">
+    </div>
+    <div class="number-menu" *ngIf="isMenuOpened">
+        <ul>
+            <li><a href="tel:9868649805">+91-9868 649 805</a></li>
+            <li><a href="tel:9319581808">+91-9319 581 808</a></li>
+            <li><a href="tel:0124-4116808">0124-4116808</a></li>
+            <li><a href="tel:0124-4114808">0124-4114808</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- <div class="callnumberwrap" (click)="clickToShowHide()" [ngClass]="numberstatus ? 'hidephonenumber' : 'showphonenumber'">
+        <ul>
+            <li><a href="tel:9868649805">+91-9868 649 805</a></li>
+            <li><a href="tel:9319581808">+91-9319 581 808</a></li>
+            <li><a href="tel:9319581808">+91-9319 581 808</a></li>
+            <li><a href="tel:9319581808">+91-9319 581 808</a></li>
+        </ul>
+    </div>
+    <div class="cliktoopennumber" (click)="clickToAction()"><i class="fa fa-phone-square"></i></div> -->
+
+
+<section id="whatsupchatbutton">
+    <div class="whatsupbutton">
+        <a href="https://api.whatsapp.com/send?phone=919868649805&text=Hello Doctor, I have contacted you through Citrine Clinic  website."><i
+                class="fa fa-whatsapp"></i></a>
+    </div>
+</section>
+
+<button class="gototop" *ngIf="isShow" (click)="gotoTop()"><i class="fa fa-long-arrow-up"></i></button>
+
+<section id="CtaWrapper" class="for-mobile" (click)="clickEvent()" [ngClass]="imagedisplay ? 'imagedisplay-block' : 'imagedisplay-none'">
+    <div class="container-fluid">
+        <div class="container-max">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ctafooter">
+                        <!-- <div class="callcta commonctawrap" [ngClass]="{'active': step==='step1'}" (click)="step='step1'">
+                            <a href="tel:9868649805">
+
+                                <img src="assets/images/cta/phone.png" class="realcolor" alt="callimage">
+                                <img src="assets/images/cta/phone-white.png" class="realcolo2" alt="callimage">
+                            </a>
+                            <p>Phone</p>
+                        </div> -->
+                        <div class="procedurescta commonctawrap" [ngClass]="{'active': step==='step2'}"
+                            (click)="step='step2'">
+                            <a href="mailto:info@citrineclinic.com">
+                                <img src="assets/images/cta/mail-color.png" class="realcolor" alt="laserimage">
+                                <img src="assets/images/cta/mail-white.png" class="realcolo2" alt="laserimage">
+                            </a>
+                            <p>Email</p>
+                        </div>
+
+                        <div class="appointment-cta commonctawrap" [ngClass]="{'active': step==='step3'}"
+                            (click)="step='step3'">
+                            <a routerLink="/book-an-appointment">
+                                <img src="assets/images/cta/calendar-color.png" class="realcolor"
+                                    alt="appointmentimage">
+                                <img src="assets/images/cta/calendar-white.png" class="realcolo2"
+                                    alt="appointmentimage">
+
+                            </a>
+                            <p>Appointment</p>
+                        </div>
+
+                        <div class="services-cta commonctawrap" [ngClass]="{'active': step==='step4'}"
+                            (click)="step='step4'">
+                            <a routerLink="/services">
+                                <img src="assets/images/cta/heart-color.png" class="realcolor" alt="serviceimage">
+                                <img src="assets/images/cta/heart-white.png" class="realcolo2" alt="serviceimage">
+
+                            </a>
+                            <p>Services</p>
+                        </div>
+
+                        <div class="mail-cta commonctawrap" [ngClass]="{'active': step==='step5'}"
+                            (click)="step='step5'">
+                            <a routerLink="/dermatologist-in-gurgaon">
+                                <img src="assets/images/cta/usre-color.png" class="realcolor" alt="mailimage">
+                                <img src="assets/images/cta/usre-white.png" class="realcolo2" alt="mailimage">
+
+                            </a>
+                            <p>Doctor</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

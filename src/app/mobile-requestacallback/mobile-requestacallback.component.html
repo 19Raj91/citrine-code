@@ -1,0 +1,50 @@
+<div class="mobile-requestformwrap">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <form class="mobile-requescallwrap" [formGroup]="reqcallform" (ngSubmit)="onSubmit()">
+                    <div class="mobile-requestheading">Request A Call Back</div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" aria-describedby="emailHelp" formControlName="name" id="name" class="form-control" placeholder="Name*" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && name.errors }">
+                        <div *ngIf="submitted && name.errors" class="invalid-feedback">
+                          <div *ngIf="name.errors?.['required']">Name is required</div>
+                          <div *ngIf="name.errors?.['pattern']">Letters only</div>
+
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" formControlName="phone" class="form-control"
+                        placeholder="Phone*" autocomplete="off"  minlength="10" maxlength="10" [ngClass]="{ 'is-invalid': submitted && phone.errors }" onkeypress="return /\d/.test(String.fromCharCode(event.keyCode || event.which))">
+                        <div *ngIf="submitted && phone.errors" class="invalid-feedback error">
+                          <div *ngIf="phone.errors?.['required']">Phone is required</div>
+                          <div *ngIf="phone.errors?.['pattern']">Please enter a valid mobile number. </div>
+                        </div>
+                      </div>
+                      <div class="mobile-captchawrap">
+                        <div class="captcha-image"><img src="data:image/jpeg;base64,{{ captcha?.captchashows }}" /></div>
+                        <div class="captcha-refreshbutton">
+                          <button  (click)="captchagoole()"><span class="fa fa-refresh"></span></button>
+                        </div>
+                        <div class="captcha-fillwrap">
+                          <input type="text" class="form-control" formControlName="captcha" id="captcha" autocomplete="off"
+                          placeholder="Captcha*" maxlength="6" [ngClass]="{ 'is-invalid': submitted && captchaval.errors }">
+                          </div>
+                      </div>
+                      <div *ngIf="submitted && captchaval.errors" class="invalid-feedback error">
+                        <div *ngIf="captchaval.errors?.['required']">Captcha is required</div>
+                      </div>
+                        <div id="captchavalid" [innerHTML]="captchavalid" ></div>
+                      <div  *ngIf="!loader">
+                        <button type="submit" class="request-mobilesubmit">Submit</button>
+                      </div>
+                      <div *ngIf="loader">
+                        <button class="btn btn_darkpink" type="button" disabled>
+                          <span class="spinner-border spinner-border-sm"></span>
+                          Sending...
+                        </button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

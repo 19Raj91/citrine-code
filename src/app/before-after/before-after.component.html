@@ -1,0 +1,53 @@
+
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage" [useSrcset]="true" >
+<div class="banner-heading for-mobile">Real Results</div>
+<div class="banner-heading for-desktop">Real Results</div>
+
+<div class="bredcurmbborder">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bredcrumb">
+                    <ul>
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a>Real Results</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+
+<div id="beforeAfter">
+    <div class="container">
+        <div class="container-max">
+            <div class="row">
+                <div class="col-12 col-lg-4" *ngFor="let res of result | paginate: { itemsPerPage: 6, currentPage: p }">
+                    <div class="galeryimage">
+                        <a routerLink="/result/{{ res.url }}">
+                            <img class="w-100" [lazyLoad]="bgimageurl+res.image" alt="{{ res.alt_tag }}" class="w-100" >
+                            <div class="categoryname">{{ res.name }}</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <div class="paginationlist">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+            </div>
+            <!-- <div class="row mt-4">
+
+            </div> -->
+
+        </div>
+    </div>
+</div>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

@@ -1,0 +1,209 @@
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="bgimageurl+blog?.blog_image_inner" alt="{{ blog?.alt_tag }}"
+        class="w-100 for-desktop" [defaultImage]="defaultImage" [useSrcset]="true">
+    <div class="banner-heading for-mobile">{{ blog?.blog_name }}</div>
+
+    <div class="bredcurmbborder">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bredcrumb">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                            <li><a routerLink="/blog">Blog</a></li>
+                            <li><a routerLink="#">{{ blog?.blog_name }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div class="blog-detail-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12">
+                <div class="row">
+                    <div class="col-12 col-sm-12 blog-space">
+                        <div class="short-blog-wrap">
+                            <div class="short-blog-imagewrap">
+                                <!-- <img src="{{bgimageurl+blog.blog_image_inner}}" class="w-100" alt="{{ blog.alt_tag }}"> -->
+                            </div>
+                            <div class="short-blog-wrapcontent">
+                                <div class="date-admin">
+                                    <div class="writer-name">By Citrine Clinic</div>
+                                    <div class="blog-postdate">{{ blog.date }}</div>
+                                    <div class="share-icon">
+                                        <ul>
+                                            <li>
+                                                <a href='https://www.facebook.com/sharer.php?u=http://digilantern.co/citrine/'
+                                                    target="_blank" title="Facebook"><i
+                                                        class="fa fa-facebook-square"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                            
+                                </div>
+                                <div class="blogshort-title">{{ blog.blog_name }}</div>
+                                <div class="blog-short-discription" [innerHTML]="blog.blog_description"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="col-12 col-sm-4">
+                <div class="consultation-form">
+                    <div class="consulationform-heading">
+                        <h2>Request An Appointment</h2>
+                        <p>Clinic Timing:</p>
+                        <p>Monday - Saturday: 10 AM – 7 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                    <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-2">
+                                        <input type="text" class="form-control" id="nameTwo" placeholder="Name*"
+                                            formControlName="name" autocomplete="off"
+                                            [ngClass]="{ 'is-invalid': submitted && name.errors }">
+                                        <div *ngIf="submitted && name.errors" class="invalid-feedback">
+                                            <div *ngIf="name.errors?.['required']">Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-2">
+                                        <input type="email" class="form-control" id="emailTwo" formControlName="email"
+                                            autocomplete="off" placeholder="Email*" placeholder="Email*"
+                                            [ngClass]="{ 'is-invalid': submitted && email.errors }">
+                                        <div *ngIf="submitted && email.errors" class="invalid-feedback">
+                                            <div *ngIf="email.errors?.['required']">Email is required</div>
+                                            <div *ngIf="email.errors?.['email']">Email must be a valid email address
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12">
+
+                                    <div class="form-2">
+                                        <input type="text" class="form-control" id="mobileTwo" formControlName="phone"
+                                            autocomplete="off" placeholder="Phone*" minlength="10" maxlength="10"
+                                            [ngClass]="{ 'is-invalid': submitted && phone.errors }">
+                                        <div *ngIf="submitted && phone.errors" class="invalid-feedback">
+                                            <div *ngIf="phone.errors?.['required']">Phone is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-2">
+                                        <input type="date" class="form-control" data-placeholder="Date*" aria-required="true"
+                                            formControlName="date" autocomplete="off" autoclose="true"
+                                            [ngClass]="{ 'is-invalid': submitted && date.errors }" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'">
+                                        <div *ngIf="submitted && date.errors" class="invalid-feedback">
+                                            <div *ngIf="date.errors?.['required']">Date is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-2">
+                                <textarea rows="6" cols="" placeholder="Message" formControlName="Message"
+                                    class="form-control"></textarea>
+                            </div>
+                            <div class="row manageform-buttons">
+                                <div class="col-12 manageweb-captacha">
+                                    <div class="captchacode1 captacha-web">
+                                        <div class="captchacodeleftpic"><img
+                                                src="data:image/jpeg;base64,{{ captcha?.captchashows }}" /></div>
+                                        <div class="captchacoderight">
+                                            <button type="button" class="btn btnBtnSubmit refresh-btn"
+                                                (click)="captchagoole()"><i class="fa fa-refresh"
+                                                    aria-hidden="true"></i></button>
+                                        </div>
+                                        <div class="commoncaptchinputright"><input type="text" class="form-control"
+                                                formControlName="captcha" id="captcha" autocomplete="off"
+                                                placeholder="Captcha*" maxlength="6"
+                                                [ngClass]="{ 'is-invalid': submitted && captchaval.errors }">
+
+                                        </div>
+                                    </div>
+                                    <div *ngIf="submitted && captchaval.errors" class="invalid-feedback">
+                                        <div *ngIf="captchaval.errors?.['required']">Captcha is required</div>
+                                    </div>
+                                    <div id="captchavalid" [innerHTML]="captchavalid"></div>
+
+                                </div>
+                                <div class="col-12 submit-now" *ngIf="!loader">
+                                    <button type="submit" (click)="onSubmit()" class="submit-button">submit</button>
+                                </div>
+                                <div *ngIf="loader">
+                                    <button class="btn btn_darkpink" type="button" disabled>
+                                        <span class="spinner-border spinner-border-sm"></span>
+                                        Sending...
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="popularposts">
+                    <div class="popular-postheading">Recent Posts</div>
+                    <div *ngFor="let rec of recent">
+                        <a routerLink="/blog-post/{{rec.url}}" class="pop-discription-wrap">
+                            <div class="smimage-smcontentwrap">
+                                <div class="sm-image">
+                                    <img src="{{bgimageurl+rec.blog_image}}" alt="rec.alt_tag">
+                                </div>
+                                <div class="pop-discription">
+                                    <div class="small-pop-text">{{ rec.blog_name }}</div>
+                                    <div class="pop-date-sm">{{ rec.date }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div> -->
+        </div>
+    </div>
+</div>
+<div class="blogdetailmargin">
+
+    <div class="container">
+        <div class="popular-postheading">Recent Posts</div>
+        <div class="row">
+            <div class="col-12 col-lg-4" *ngFor="let rec of recent">
+                <div class="popularposts">
+                    <div>
+                        <a routerLink="/blog-post/{{rec.url}}" class="pop-discription-wrap">
+                            <div class="smimage-smcontentwrap">
+                                <div class="sm-image">
+                                    <img src="{{bgimageurl+rec.blog_image}}" alt="rec.alt_tag">
+                                </div>
+                                <div class="pop-discription">
+                                    <div class="small-pop-text">{{ rec.blog_name }}</div>
+                                    <div class="pop-date-sm">{{ rec.date }}</div>
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>

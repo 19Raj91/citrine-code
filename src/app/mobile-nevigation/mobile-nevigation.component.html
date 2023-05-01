@@ -1,0 +1,320 @@
+<!-- <div class="hamburger" (click)="clickEvent()"
+    [ngClass]="status ? 'success' : 'danger'">
+     Some content
+</div> -->
+
+<!-- <p *ngIf="isMenuOpened">True</p>
+<p *ngIf="!isMenuOpened">Fase</p> -->
+<div class="" clickOutside (clickOutside)="clickedOutside()" (click)="forslide()"  [ngClass]="formenuslide ? 'openmenuslide' : 'closemenuslide'">
+
+  <label for="menu-control" class="hamburger" (click)="clickEvent()" [ngClass]="status ? 'openhamburgure' : 'closehamburgure'" (click)="toggleMenu1()">
+    <i class="hamburger__icon bar1"></i>
+    <i class="hamburger__icon bar2"></i>
+    <i class="hamburger__icon bar3"></i>
+    <!-- status:{{status}}<br/>
+      outsideclick:{{outsideclick}} -->
+
+  </label>
+  <input type="checkbox" id="menu-control" class="menu-control">
+  <aside class="sidebar" *ngIf="isMenuOpened">
+    <nav class="sidebar__menu">
+      <a class="sidebarlogo" routerLinkActive="active-link" routerLink="/"><img
+          src="assets/images/citrine-clinic-logo.webp" width="152px" alt="logo"></a>
+      <ul>
+        <li><a (click)="menuClickEvent()" routerLink="/" routerLinkActive="active-link">Home</a></li>
+        <li>
+          <label for="menu-4">About Us <i class="fa fa-angle-right"></i></label>
+          <input type="checkbox" id="menu-4" name="menu-4" class="menu-checkbox">
+          <div class="menu">
+            <label class="menu-toggle" for="menu-4"> <i class="fa fa-long-arrow-left"> Back</i></label>
+            <ul>
+              <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dermatologist-in-gurgaon"> About
+                  Doctor</a></li>
+              <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/skin-clinic-in-gurgaon">About
+                  Clinic</a></li>
+
+            </ul>
+          </div>
+        </li>
+        <li>
+          <label for="menu-9">Services<i class="fa fa-angle-right"></i></label>
+          <input type="checkbox" id="menu-9" name="menu-9" class="menu-checkbox">
+          <div class="menu">
+            <label class="menu-toggle" for="menu-9"><i class="fa fa-long-arrow-left"> Back</i></label>
+            <ul>
+              <li>
+                <label for="menu-10">Skin Toning & Pigmentation<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-10" name="menu-10" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-10"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/hyperpigmentation-treatment-in-gurgaon">Pigmentation</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/laser-toning-in-gurgaon">Laser Toning</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Skin Toning</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/carbon-peel-treatment-in-gurgaon">Carbon Peel</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dark-circles-treatment-gurgaon">Dark Circles</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dark-spots-removal-treatment-in-gurgaon">Dark Spots</a>
+                    </li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Skin Texture Improvement</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Laser Tattoo Removal</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Rosacea</a></li>
+                    <!--
+                    <li><a routerLinkActive="active-link"  routerLink="/fairness-and-pigmentation">Freckles</a></li>
+                  <li><a routerLinkActive="active-link"  routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyperpigmentation</a></li>
+                    <li><a routerLinkActive="active-link"  routerLink="/photofacial-treatment-in-gurgaon">Photofacial</a></li>
+                    <li><a routerLinkActive="active-link"  routerLink="/skin-lightening-treatment-gurgaon">Skin Lightening Treatment</a></li>
+                    <li><a routerLinkActive="active-link"  routerLink="/skin-whitening-treatment-gurgaon">Skin Whitening Treatment</a></li> -->
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-11">Acne &amp; Scars<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-11" name="menu-11" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-11"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/acne-treatment-in-gurgaon">Acne</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/acne-scar-treatment-in-gurgaon">Acne Scar Reduction</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Open Pores</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/laser-resurfacing-in-gurgaon">Laser Resurfacing</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/skin-resurfacing-treatment-in-gurgaon">Skin Resurfacing</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">MNRF</a></li>
+                    <!-- <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/acne-scar-treatment-in-gurgaon">Scars</a></li> -->
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-24">Skin Tightening &amp; Stretch Marks<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-24" name="menu-24" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-24"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link"
+                       >Face Tightening</a> </li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link"
+                        routerLink="/stretch-marks-treatment-in-gurgaon">Stretch Marks
+                        Reduction</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">HIFU</a></li>
+                    <!-- <li><a routerLinkActive="active-link"  routerLink="/skin-tightening-and-stretch-marks/skin-tightening-treatment-in-gurgaon">Skin Tightening</a> </li> -->
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-12">Aging Skin and Facial Contouring<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-12" name="menu-12" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-12"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/anti-wrinkle-injection-in-gurgaon">Anti Wrinkle Injection</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dermal-fillers-treatment-in-gurgaon">Dermal Fillers</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/vampire-facelift-treatment-in-gurgaon">Vampire Facelift</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/thread-lift-treatment-gurgaon">Thread Lift</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">LaserPeels and Skin Rejuvenation</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">ChinEnhancement</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/lip-enhancement-surgery-gurgaon">Lip Enhancement</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Tear Trough</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Crow’s Feet</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Sagging Skin</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Forehead Lines</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Under Eye Rejuvenation</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" ruterLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/microdermabrasion-treatment-in-gurgaon">Microdermabrasion</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-13">Unwanted Hair<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-13" name="menu-12" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-13"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/laser-hair-removal-in-gurgaon">Laser Hair Reduction</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Beard Shaping</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Hair Removal in Male</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Hair Removal in Female </a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Facial Hair Removal</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Full Body Hair Removal</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Legs Hair Removal</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Back Hair Reduction</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-14">Skin Glow and Resurfacing<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-14" name="menu-14" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-14"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Chemical Peel </a>
+                    </li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Mesoglow </a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-15">Hair Treatments<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-15" name="menu-15" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-15"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link"
+                       >Hairfall</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dermaroller-treatment-in-gurgaon">Dermaroller</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/mesotherapy-treatment-in-gurgaon">Mesotherapy</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/growth-factor-injection">Growth Factor Injection</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/fue-hair-transplant-in-gurgaon">FUE Hair Transplant</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/fut-hair-transplant-in-gurgaon">FUT Hair Transplant</a></li>
+                    <!-- <li><a routerLinkActive="active-link"  routerLink="/hair-treatments/alopecia-areata-treatment-gurgaon">Alopecia Areata Treatment</a></li>
+                    <li><a routerLinkActive="active-link"  routerLink="/hair-treatments">Hair Transplant</a></li> -->
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-16">Skin Allergy<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-16" name="menu-16" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-16"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/eczema-treatment-in-gurgaon">Eczema</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/urticaria-treatment-in-gurgaon">Urticaria</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/atopic-dermatitis-treatment-in-gurgaon">Atopic Dermatitis</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-17">Infections<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-17" name="menu-17" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-17"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link"
+                        routerLink="/fungal-infections-treatment-in-gurgaon">Fungal Infection</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Viral Infection</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Bacterial Infection</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-18">Bridal Dermatology<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-18" name="menu-18" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-18"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/bridal-dermatology">Bridal Skin Care</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/bridal-dermatology">Groom Skin Care</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-19">Medical Facial<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-19" name="menu-19" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-19"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/aquajet-oxy-peel-facial-in-gurgaon">Aquajet Oxy Peel Facial</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/tattva-miracle-therapy">Miracle Facial</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/carbon-peels">Carbon Peel</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/chemical-peel-treatment-in-gurgaon">Chemical Peel</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/pumpkin-peel-facial-treatment-in-gurgaon">Pumpkin Peel Facial</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/oxygen-facial-treatment-in-gurgaon">The Oxygen Facial</a></li>
+                    <!--<li><a routerLinkActive="active-link"  routerLink="/medical-facial/hydrafacial-in-gurgaon">Hydrafacial in Gurgaon</a></li> -->
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-20">General Dermatology<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-20" name="menu-20" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-20"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/psoriasis-treatment-gurgaon">Psoriasis</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Vitiligo</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/hyperpigmentation-treatment-in-gurgaon">Hyper Pigmentation</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Keloids</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Atopic Dermatitis</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Corns</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Mole</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Hairfall</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Horns</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Warts</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/melasma-treatment-in-gurgaon">Melasma</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/freckles-treatment-in-gurgaon">Freckles</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Nail Avulsion</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/ingrown-toe-nail">Ingrown Toe Nail</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Birth Marks</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Skin Rashes</a></li>
+                  </ul>
+                </div>
+              </li>
+
+              <li>
+                <label for="menu-21">Dermato Surgery<i class="fa fa-angle-right"></i></label>
+                <input type="checkbox" id="menu-21" name="menu-21" class="menu-checkbox">
+                <div class="menu">
+                  <label class="menu-toggle" for="menu-21"><i class="fa fa-long-arrow-left"> Back</i></label>
+                  <ul>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/dermato-surgery">Mole
+                        &amp; Warts Removal</a></li>
+                    <li><a (click)="menuClickEvent()" routerLinkActive="active-link"
+                        routerLink="/dermato-surgery">Vitiligo</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <label for="menu-7">Testimonials<i class="fa fa-angle-right"></i></label>
+          <input type="checkbox" id="menu-7" name="menu-7" class="menu-checkbox">
+          <div class="menu">
+            <label class="menu-toggle" for="menu-7"> <i class="fa fa-long-arrow-left"> Back</i></label>
+            <ul>
+              <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/testimonials">Written
+                  Testimonials</a></li>
+              <!-- <li><a routerLinkActive="active-link"  routerLink="/video-testimonial">Videos Testimonials</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/technologies">Technologies </a></li>
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/clinic-gallery">Gallery </a></li>
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link">Real Results</a>
+        </li>
+        <!-- <li><a routerLinkActive="active-link"  routerLink="/videos">Videos</a></li> -->
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/blog">Blogs</a></li>
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/contact">Contact Us</a></li>
+        <li><a (click)="menuClickEvent()" routerLinkActive="active-link" routerLink="/book-an-appointment">Request An Appointment</a></li>
+
+      </ul>
+      <div class="socialbuttonwrap">
+        <div class="socialwrap">
+          <p>Follow Us On</p>
+          <ul>
+            <li class="facebook-hover"><a href="https://www.facebook.com/citrineclinicbydrniti/" target="_blank"><i
+                  class="fa fa-facebook"></i></a></li>
+            <!-- <li class="twitter-hover"><a routerLink="/"><i class="fa fa-twitter"></i></a></li> -->
+            <li class="insta-hover"><a href="https://www.instagram.com/citrineclinic/" target="_blank"  ><i class="fa fa-instagram"></i></a>
+            </li>
+            <li  class="youtube-hover"> <a href="https://www.youtube.com/@citrineclinicbydr.nitigaur2957" target="_blank"><i
+                  class="fa fa-youtube-play"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- <label for="menu-control" class="sidebar__close"></label> -->
+
+
+  </aside>
+</div>

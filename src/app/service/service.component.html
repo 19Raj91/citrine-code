@@ -1,0 +1,40 @@
+<section class="commonwrap">
+  <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100" >
+<!-- <div class="banner-heading for-mobile">Services</div>
+<div class="banner-heading for-mobile">Services</div> -->
+<div class="bredcurmbborder">
+  <div class="container">
+      <div class="row">
+          <div class="col-12">
+              <div class="bredcrumb">
+                  <ul>
+                      <li><a routerLink="/">Home</a></li>
+                      <li><a>Services</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+<div class="for-mobile">
+  <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+
+<section id="TreatmentCategories">
+  <div class="container">
+      <div class="row">
+          <div class="col-12 col-lg-4 makesomecoustem" *ngFor="let ser of service">
+              <div class="maincatwrap">
+                  <a routerLink="/{{ser.url}}" class="maincatlink">
+                      <div class="skinimgwrap"> <img src="{{bgimageurl+ser?.image}}" class="img-fluid">
+                          <p>{{ ser.name }}</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<app-mobile-appointment-form></app-mobile-appointment-form>
+<app-desktop-appointment></app-desktop-appointment>

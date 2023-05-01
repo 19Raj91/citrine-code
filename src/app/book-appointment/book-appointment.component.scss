@@ -1,0 +1,698 @@
+.contact_us {
+    background-color: #f1f1f1;
+    padding: 30px 0px;
+
+    .contact_inner {
+        background-color: rgba(255, 255, 255, .6);
+        position: relative;
+        box-shadow: 20px 22px 44px #cccc;
+        border-radius: 0px;
+        padding-top: 20px;
+
+        .contact_form_inner {
+            .contact_field {
+                padding: 0px;
+
+                .contact-heading {
+                    text-align: left;
+                    font-size: 30px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 25px;
+                    text-align: center;
+                    color: #000;
+                }
+
+                form {
+                    padding: 0px 20px;
+
+                    .form-group {
+                        .form-control {
+                            border-radius: 0px;
+                            // border: none;
+                            // border-bottom: 1px solid #ccc;
+                            margin-bottom: 10px;
+                            padding: 10px;
+
+                            &:focus {
+                                box-shadow: none;
+                                outline: none;
+                                // border-bottom: 2px solid #DB9200;
+                            }
+
+                            &::placeholder {
+                                font-size: 16px;
+                                // font-family: "Marcellus", serif;
+                                font-family: 'Poppins', sans-serif;
+                            }
+                        }
+
+                        .invalid-feedback {
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                            color: red;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+
+                        .captchacode1.captacha-web {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 10px;
+                            .captcha-image{
+                                display: flex;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+
+                            .captchacode1 {
+                                height: 50px;
+
+                                .captcha-image {
+                                    img {
+                                        width: 100%;
+                                        height: 48px;
+
+                                    }
+                                }
+                            }
+
+                            .captcha-fillwrap {
+                                input {
+                                    margin-bottom: 0px;
+                                }
+                            }
+
+                            .captcha-refreshbutton {
+                                button {
+                                    border: 0px;
+                                    padding: 16px 20px;
+                                    cursor: pointer;
+                                    margin: 0px 10px 0px 0px;
+
+                                }
+                            }
+
+
+                        }
+
+                        .invalid-feedback-right {
+                            text-align: right;
+                        }
+
+                        .invalid-feedback-center {
+                          text-align: center;
+                        }
+
+
+                    }
+
+                    .contact_form_submit {
+                      background-color: #db9200;
+                      border: none;
+                      color: #fff;
+                      padding: 10px 15px;
+                      width: 30%;
+                      cursor: pointer;
+                      font-size: 16px;
+                      display: block;
+                      margin: 0 auto;
+                    }
+
+
+                    .form-2 {
+                        :focus-visible {
+                            outline: 0px;
+                        }
+
+                        input {
+                            border-radius: 0px;
+                            border: 0px;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            position: relative;
+                        }
+
+                        .form-control {
+                            border-radius: 0px;
+                            border: none;
+                            border-bottom: 1px solid #ccc;
+                            // margin-bottom: 30px;
+                            border-radius: 0px;
+                            // font-family: "Marcellus", serif;
+                            font-family: 'Poppins', sans-serif;
+                        }
+
+                        input[type="date"] {
+                            // font-family: "Marcellus", serif;
+                            font-family: 'Poppins', sans-serif;
+                            font-size: 16px;
+                            color: #777;
+
+                            &::before {
+                                content: attr(data-placeholder);
+                                width: 100%;
+
+                            }
+
+                            &:focus {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            &:valid {
+                                &::before {
+                                    display: none;
+                                }
+                            }
+
+                            &::-webkit-calendar-picker-indicator {
+                                background: transparent;
+                                bottom: 0;
+                                color: transparent;
+                                cursor: pointer;
+                                height: auto;
+                                left: 0;
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                width: auto;
+                            }
+                        }
+                        .invalid-feedback {
+                            font-size: 12px;
+                            margin-bottom: 10px;
+                            color: red;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.map-heading {
+    letter-spacing: 1px;
+    padding-bottom: 0px;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.map_sec {
+    padding: 10px 0px;
+
+    .contpageheading {
+        letter-spacing: 1px;
+        padding-bottom: 0px;
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .map_inner {
+        .map-heading {
+            text-align: center;
+            font-size: 30px;
+        }
+
+    }
+
+    .map_bind {
+        margin-top: 10px;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+
+
+    .contact_info_sec {
+        position: static;
+        background-color: #DB9200;
+        height: auto;
+        width: auto;
+        padding: 40px;
+        margin-top: 20px;
+
+        h4 {
+            letter-spacing: 1px;
+            padding-bottom: 15px;
+            font-size: 24px;
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .info_single {
+            margin: 30px 0px;
+            display: flex;
+            color: #2a2a2a;
+
+            i {
+                margin-right: 15px;
+                font-size: 24px;
+            }
+            a {
+                color: #000;
+            }
+
+            p {
+                a {
+                    color: #000;
+                }
+            }
+
+            span {
+                font-size: 16px;
+                letter-spacing: 1px;
+
+            }
+
+            .contact-numbers {
+                display: block;
+                .mobile-numbers {
+                    display: flex;
+                    p+p{
+                        margin-left: 10px;
+                    }
+                }
+                .landline-numbers{
+                    display: flex;
+                    p+p{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+    .map_sec {
+
+        .contact_info_sec {
+            padding: 15px;
+            margin-top: 20px;
+
+            .info_single {
+
+                p {
+                    a {
+                        color: #000;
+                    }
+                }
+
+                span {
+                    font-size: 14px;
+                    letter-spacing: 0px;
+                    color: #000;
+
+                }
+
+                .contact-numbers {
+                    display: block;
+                    .mobile-numbers {
+                        display: block;
+                        p+p{
+                            margin-left: 0px;
+                        }
+                    }
+                    .landline-numbers{
+                        display: flex;
+                        p+p{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .contact_us {
+        background-color: #f1f1f1;
+        padding: 30px 0px;
+
+        .contact_inner {
+            background-color: rgba(255, 255, 255, .6);
+            position: relative;
+            box-shadow: 20px 22px 44px #cccc;
+            border-radius: 0px;
+            padding-top: 20px;
+
+            .contact_form_inner {
+                .contact_field {
+                    padding: 0px;
+
+                    .contact-heading {
+                        text-align: left;
+                        font-size: 30px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 25px;
+                        text-align: center;
+                        color: #000;
+                    }
+
+                    form {
+                        padding: 0px 20px;
+
+                        .form-group {
+                            .form-control {
+                                border-radius: 0px;
+                                // border: none;
+                                // border-bottom: 1px solid #ccc;
+                                margin-bottom: 10px;
+                                padding: 10px;
+
+                                &:focus {
+                                    box-shadow: none;
+                                    outline: none;
+                                    // border-bottom: 2px solid #DB9200;
+                                }
+
+                                &::placeholder {
+                                    font-size: 16px;
+                                    // font-family: "Marcellus", serif;
+                                    font-family: 'Poppins', sans-serif;
+                                }
+                            }
+
+                            .invalid-feedback {
+                                font-size: 12px;
+                                margin-bottom: 10px;
+                                color: red;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                            }
+
+                            .captchacode1.captacha-web {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin-bottom: 10px;
+                                .captcha-image{
+                                    height: 40px;
+                                    img{
+                                        width: 100%;
+                                        height: 40px;
+                                    }
+                                }
+                                .captchacode1 {
+                                    height: 40px;
+
+                                    .captcha-image {
+                                        img {
+                                            width: 100%;
+                                            height: 40px;
+
+                                        }
+                                    }
+                                }
+
+                                .captcha-fillwrap {
+                                    input {
+                                        margin-bottom: 0px;
+                                    }
+                                }
+
+                                .captcha-refreshbutton {
+                                    button {
+                                        border: 0px;
+                                        padding: 0px 20px;
+                                        cursor: pointer;
+                                        margin: 0px 10px 0px 0px;
+                                        height: 40px;
+
+                                    }
+                                }
+
+
+                            }
+
+                            .invalid-feedback-right {
+                                text-align: right;
+                            }
+
+                            .invalid-feedback-center {
+                              text-align: center;
+                            }
+
+
+                        }
+
+                        .contact_form_submit {
+                            background-color: #DB9200;
+                            border: none;
+                            color: #fff;
+                            padding: 10px 15px;
+                            width: 100%;
+                            cursor: pointer;
+                            font-size: 16px;
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(min-width:1371px) {
+    .contact_us {
+        padding: 60px 0px;
+
+        .displaymanage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .contact-cliniimage {
+                width: 50%;
+            }
+
+            .contact-cliniimage img {
+                height: 100%;
+            }
+
+            .contact_inner {
+                padding-top: 0px;
+                // border-radius: 25px;
+                width: 60%;
+
+                .contact_form_inner {
+                    .contact_field {
+                        padding: 30px 30px 50px 30px;
+
+                        .contact-heading {
+                            font-size: 40px;
+                            text-align: left;
+                        }
+
+                        form {
+                            padding-right: 0px;
+                            padding-left: 0px;
+
+                            .form-group {
+                                .form-control {
+                                    border-radius: 0px;
+                                    // border: none;
+                                    // border-bottom: 1px solid #ccc;
+                                    margin-bottom: 10px;
+
+                                    &:focus {
+                                        box-shadow: none;
+                                        outline: none;
+                                        // border-bottom: 2px solid #DB9200;
+                                    }
+
+                                    &::placeholder {
+                                        font-size: 16px;
+                                        // font-family: "Marcellus", serif;
+                                        font-family: 'Poppins', sans-serif;
+                                    }
+                                }
+                            }
+
+                            .contact_form_submit {
+                              background-color: #db9200;
+                              border: none;
+                              color: #fff;
+                              padding: 10px 15px;
+                              width: 30%;
+                              cursor: pointer;
+                              font-size: 16px;
+                              display: block;
+                              margin: 0 auto;
+                                // margin-top: 20px;
+                            }
+
+
+                            .form-2 {
+                                :focus-visible {
+                                    outline: 0px;
+                                }
+
+                                input {
+                                    border-radius: 0px;
+                                    border: 0px;
+                                    width: 100%;
+                                    margin-bottom: 10px;
+                                    padding: 10px;
+                                    position: relative;
+                                }
+
+                                .form-control {
+                                    border-radius: 0px;
+                                    border: none;
+                                    border: 1px solid #ccc;
+                                    margin-bottom: 10px;
+                                    border-radius: 0px;
+                                    // font-family: "Marcellus", serif;
+                                    font-family: 'Poppins', sans-serif;
+                                }
+
+                                input[type="date"] {
+                                    // font-family: "Marcellus", serif;
+                                    font-family: 'Poppins', sans-serif;
+                                    font-size: 16px;
+                                    color: #777;
+
+                                    &::before {
+                                        content: attr(data-placeholder);
+                                        width: 100%;
+
+                                    }
+
+                                    &:focus {
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+
+                                    &:valid {
+                                        &::before {
+                                            display: none;
+                                        }
+                                    }
+
+                                    &::-webkit-calendar-picker-indicator {
+                                        background: transparent;
+                                        bottom: 0;
+                                        color: transparent;
+                                        cursor: pointer;
+                                        height: auto;
+                                        left: 0;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 0;
+                                        width: auto;
+                                    }
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+
+
+
+    .map_sec {
+        padding: 30px 0px;
+
+        .map-heading {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .map_bind {
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .contpageheading {
+            letter-spacing: 1px;
+            padding-bottom: 0px;
+            font-size: 24px;
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+        }
+
+        .contact_info_sec {
+            padding: 40px;
+            border-radius: 0px;
+            -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+
+
+            .info_single {
+                margin: 30px 0px;
+                display: flex;
+                color: #2a2a2a;
+
+                i {
+                    margin-right: 15px;
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+
+                    span {
+                        display: block;
+                        line-height: 1;
+                    }
+
+                }
+
+                span {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+
+                }
+
+                .contact-numbers {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}

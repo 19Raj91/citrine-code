@@ -1,0 +1,58 @@
+.choosdr-wrap {
+    background-color: #252525;
+    padding: 30px 0px;
+
+    .manage-alienment{
+        align-items: center;
+        .whychooseheadingsmall {
+            text-align: left; 
+        }
+    
+        .whychooseheadingbig {
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+    
+        .whychoose-content {
+            p {
+                color: #fff;
+                line-height: 30px;
+               
+            }
+        }
+    
+        .why-choose-image {
+            // margin: 20px 0px;
+    
+            img {
+                width: 100%;
+            }
+        }
+    
+        .choose-pointer {
+            margin-top: 20px;
+            ul {
+                li {
+                    color: #fff;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                    display: flex;
+                    align-items: baseline;
+                    &:last-child{
+                        margin: 0px;
+                    }
+    
+                    i {
+                        color: #DB9200;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

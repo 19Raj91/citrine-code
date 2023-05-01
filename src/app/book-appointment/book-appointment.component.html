@@ -1,0 +1,172 @@
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage"
+        [useSrcset]="true">
+    <div class="banner-heading for-mobile">Request An Appointment</div>
+    <div class="banner-heading for-desktop">Request An Appointment</div>
+
+    <div class="bredcurmbborder">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bredcrumb">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                            <li><a>Request An Appointment</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact_us" class="contact_us" style="background-image:url(assets/images/clinic/contact-sideimage.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <div class="displaymanage">
+                    <div class="contact_inner">
+                        <div class="contact_form_inner">
+                            <div class="contact_field">
+                                <div class="contact-heading commongold-heading for-desktop ">Request An Appointment
+                                </div>
+                                <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Name*"
+                                            formControlName="name" id="name" autocomplete="off" placeholder="Name*"
+                                            [ngClass]="{ 'is-invalid': submitted && name.errors }"  />
+                                        <div *ngIf="submitted && name.errors" class="invalid-feedback">
+                                            <div *ngIf="name.errors?.['required']">Name is required</div>
+                                            <div *ngIf="name.errors?.['pattern']">Letters only</div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email*"
+                                            formControlName="email" autocomplete="off" placeholder="Email*" id="email"
+                                            placeholder="Email*"
+                                            [ngClass]="{ 'is-invalid': submitted && email.errors }" />
+                                        <div *ngIf="submitted && email.errors" class="invalid-feedback">
+                                            <div *ngIf="email.errors?.['required']">Email is required</div>
+                                            <div *ngIf="email.errors?.['pattern']">Email must be a valid email address
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control" placeholder="Phone*"
+                                            formControlName="phone" autocomplete="off" placeholder="Phone*"
+                                            minlength="10" maxlength="10"
+                                            [ngClass]="{ 'is-invalid': submitted && phone.errors }"  onkeypress="return /\d/.test(String.fromCharCode(event.keyCode || event.which))" />
+                                        <div *ngIf="submitted && phone.errors" class="invalid-feedback">
+                                             <div *ngIf="phone.errors?.['required']">Phone is required</div>
+                                             <div *ngIf="phone.errors?.['pattern']">Please enter a valid mobile number. </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-2">
+                                        <input type="date" data-placeholder="Date*"  min="{{currentDate | date:'yyyy-MM-dd'}}" required aria-required="true"
+                                            class="form-control" formControlName="date" autocomplete="off"
+                                            autoclose="true" [ngClass]="{ 'is-invalid': submitted && date.errors }">
+                                        <div *ngIf="submitted && date.errors" class="invalid-feedback">
+                                            <div *ngIf="date.errors?.['required']">Date is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" formControlName="message"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="captchacode1 captacha-web">
+                                            <div class="captchacode1">
+                                                <div class="captchacodeleftpic captcha-image"><img
+                                                        src="data:image/jpeg;base64,{{ captcha?.captchashows }}" />
+                                                        <div class="captchacoderight captcha-refreshbutton for-desktop">
+                                                            <button type="button" class="btn btnBtnSubmit"
+                                                                (click)="captchagoole()"><i class="fa fa-refresh"
+                                                                    aria-hidden="true"></i></button>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="captchacoderight captcha-refreshbutton for-mobile">
+                                                <button type="button" class="btn btnBtnSubmit"
+                                                    (click)="captchagoole()"><i class="fa fa-refresh"
+                                                        aria-hidden="true"></i></button>
+                                            </div>
+                                            <div class="commoncaptchinputright captcha-fillwrap"><input type="text"
+                                                    class="form-control" formControlName="captcha" id="captcha"
+                                                    autocomplete="off" placeholder="Captcha*" maxlength="6"
+                                                    [ngClass]="{ 'is-invalid': submitted && captchaval.errors }">
+                                            </div>
+
+                                        </div>
+                                        <div *ngIf="submitted && captchaval.errors"
+                                            class="invalid-feedback invalid-feedback-center">
+                                            <div *ngIf="captchaval.errors?.['required']">Captcha is required
+                                            </div>
+                                            <div *ngIf="captchaval.errors?.['pattern']">Please Enter Valid Captcha</div>
+                                        </div>
+                                        <div id="captchavalid" [innerHTML]="captchavalid"></div>
+                                    </div>
+                                    <div *ngIf="!loader">
+                                        <button type="submit" (click)="onSubmit()"
+                                            class="contact_form_submit">Submit</button>
+                                    </div>
+                                    <div *ngIf="loader">
+                                        <button class="btn btn_darkpink" type="button" disabled>
+                                            <span class="spinner-border spinner-border-sm"></span>
+                                            Sending...
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="contpageheading">Contact Info</div>
+                <div class="contact_info_sec">
+                    <div class="info_single">
+                        <i class="fa fa-phone"></i>
+                        <div class="contact-numbers">
+                            <div class="mobile-numbers">
+                                <p><a href="tel:+91-9868 649 805">+91-9868 649 805</a>, </p>
+                                <p><a href="tel:+91-9319 581 808">+91-9319 581 808</a> </p>
+                            </div>
+                            <div class="landline-numbers">
+                                <p><a href="tel:0124-4114808">0124 411 4808</a>, </p>
+                                <p><a href="tel:0124-4116808">0124 411 6808</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_single">
+                        <i class="fa fa-envelope-o"></i>
+                        <a href="mailto:info@citrineclinic.com">info@citrineclinic.com</a>
+                    </div>
+                    <div class="info_single">
+                        <i class="fa fa-map-marker"></i>
+                        <span>SCO- 19, Huda Market Road Sector 15 Part 2, Market, Gurugram, Haryana 122001,
+                            India</span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="map-heading">Find Us on Google Map</div>
+                <div class="map_inner">
+                    <div class="map_bind">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d56123.57405155915!2d77.044677!3d28.457754!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19a3645dcd1b%3A0x55620b9e51afd7a6!2sCitrine%20Clinic%20by%20Dr%20Niti%20Gaur!5e0!3m2!1sen!2sin!4v1668685384719!5m2!1sen!2sin"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

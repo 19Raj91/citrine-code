@@ -1,0 +1,97 @@
+<div id="consultation-wrapper" class="for-mobile">
+    <div class="container">
+        <div class="row manage-webform">
+            <div class="col-12 col-lg-6">
+                <div class="consultation-form">
+                    <div class="consulationform-heading">
+                        <h2>Request An Appointment</h2>
+                        <p>Clinic Timing:</p>
+                        <p>Monday - Saturday: 10 AM – 7 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                    <form  [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-2">
+                                        <input type="text" class="form-control" id="nameTwo" placeholder="Name*" formControlName="name" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && name.errors }" >
+                                        <div *ngIf="submitted && name.errors" class="invalid-feedback">
+                                          <div *ngIf="name.errors?.['required']">Name is required</div>
+                                          <div *ngIf="name.errors?.['pattern']">Letters only</div>
+
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-2">
+                                        <input type="text" class="form-control" id="emailTwo" formControlName="email" autocomplete="off" placeholder="Email*" placeholder="Email*" [ngClass]="{ 'is-invalid': submitted && email.errors }">
+                                        <div *ngIf="submitted && email.errors" class="invalid-feedback">
+                                          <div *ngIf="email.errors?.['required']">Email is required</div>
+                                          <div *ngIf="email.errors?.['pattern']">Email must be a valid email address</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+
+                                    <div class="form-2">
+                                      <input type="tel" class="form-control" placeholder="Phone*"
+                                      formControlName="phone" autocomplete="off" placeholder="Phone*"
+                                      minlength="10" maxlength="10"
+                                      [ngClass]="{ 'is-invalid': submitted && phone.errors }"  onkeypress="return /\d/.test(String.fromCharCode(event.keyCode || event.which))" />
+                                  <div *ngIf="submitted && phone.errors" class="invalid-feedback">
+                                      <div *ngIf="phone.errors?.['required']">Phone is required</div>
+                                      <div *ngIf="phone.errors?.['pattern']">Phone is required</div>
+                                  </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-2">
+                                        <!-- <input type="text" class="form-control" placeholder="Date*" data-placeholder="Date*" aria-required="true" formControlName="date" autocomplete="off"
+                                        autoclose="true" [ngClass]="{ 'is-invalid': submitted && date.errors }" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'"> -->
+                                        <input type="date" class="form-control" formControlName="date" data-placeholder="Date*" min="{{currentDate | date:'yyyy-MM-dd'}}" required aria-required="true" autocomplete="off" [ngClass]="{ 'is-invalid': submitted && date.errors }">
+                                        <div *ngIf="submitted && date.errors" class="invalid-feedback">
+                                          <div *ngIf="date.errors?.['required']">Date is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-2">
+                                <textarea rows="6" cols="" placeholder="Message" formControlName="message" class="form-control"></textarea>
+                            </div>
+                            <div class="row manageform-buttons">
+                                <div class="col-12 manageweb-captacha">
+                                  <div class="captchacode1 captacha-web">
+                                    <div class="captchacodeleftpic"><img src="data:image/jpeg;base64,{{ captcha?.captchashows }}" /></div>
+                                    <div class="captchacoderight">
+                                      <button type="button" class="btn btnBtnSubmit refresh-btn" (click)="captchagoole()"><i class="fa fa-refresh"
+                                          aria-hidden="true"></i></button>
+                                    </div>
+                                    <div class="commoncaptchinputright"><input type="text" class="form-control" formControlName="captcha" id="captcha" autocomplete="off"
+                                      placeholder="Captcha*" maxlength="6" [ngClass]="{ 'is-invalid': submitted && captchaval.errors }">
+                                    <div *ngIf="submitted && captchaval.errors" class="invalid-feedback">
+                                      <div *ngIf="captchaval.errors?.['required']">Captcha is required</div>
+                                      <div *ngIf="captchaval.errors?.['pattern']">Please Enter Valid Captcha</div>
+                                    </div>
+                                    <div id="captchavalid" [innerHTML]="captchavalid"></div>
+                                    </div>
+                                  </div>
+
+                                </div>
+                                <div class="col-12 submit-now" *ngIf="!loader">
+                                    <button type="submit" (click)="onSubmit()" class="submit-button">submit</button>
+                                </div>
+                                <div *ngIf="loader">
+                                  <button class="btn btn_darkpink" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm"></span>
+                                    Sending...
+                                  </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

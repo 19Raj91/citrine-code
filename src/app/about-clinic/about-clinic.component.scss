@@ -1,0 +1,299 @@
+::ng-deep .homedrbg {
+    .managehomedrbg {
+        .homedr-discription {
+            .buttongroup {
+                a {
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.homeaboutwrap {
+    margin-top: 20px;
+
+    .manage-homeaboutwrap {
+        align-items: center;
+
+        .homeaboutcitrine {
+            .homeaboutheading {
+                font-size: 30px;
+                // font-weight: bold;
+                margin-bottom: 0px;
+                text-align: center;
+                line-height: 1;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .readmore {
+                margin-top: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+
+                a {
+                    border: 1px solid #DB9200;
+                    display: inline-block;
+                    padding: 12px 20px;
+                    border-radius: 10px;
+                    color: #000;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+} 
+
+.candidate-wrap {
+    margin-top: 20px;
+
+    .candidate-content-wrap {
+        margin-bottom: 10px;
+
+        .candidate-heading {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            line-height: 24px;
+        }
+    }
+
+    .clinic-pointer {
+        ul {
+            li {
+                color: #000;
+                line-height: 24px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: baseline;
+
+                i {
+                    color: #DB9200;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+//--------------
+
+.approch-wrap {
+    background: whitesmoke;
+    padding: 30px 0px;
+
+    .approch-heading {
+        margin-bottom: 20px;
+    }
+
+    .approch-messur {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        .approch-width {
+            width: 80%;
+
+            .safity-wrap {
+                background: #fff;
+                padding: 30px;
+                border-radius: 10px;
+
+                .safity-heading {
+                    font-size: 26px;
+                    text-align: left;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    line-height: 30px;
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+
+    .homeaboutwrap {
+
+        .manage-homeaboutwrap {
+
+            .homeaboutcitrine {
+                .homeaboutheading {
+                    font-size: 24px;
+                }
+
+
+
+            }
+        }
+    }
+
+
+
+    .candidate-wrap {
+
+        .clinic-pointer {
+            ul {
+                li {
+                    font-size: 14px;
+
+                }
+            }
+        }
+    }
+
+    .approch-wrap {
+
+        .approch-messur {
+
+            .approch-width {
+
+                .safity-wrap {
+                    padding: 15px;
+
+                    .safity-heading {
+                        font-size: 22px;
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1370px) {
+    .homeaboutwrap {
+        .manage-homeaboutwrap {
+            .homeaboutcitrine {
+                .homeaboutheading {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+
+
+    .approch-wrap {
+    
+        .approch-messur {
+    
+            .approch-width {
+                width:auto;
+            }
+        }
+    
+    }
+
+}
+
+@media(min-width:1371px) {
+    .homeaboutwrap {
+        margin-top: 50px;
+
+        .manage-homeaboutwrap {
+            align-items: center;
+
+            .homeaboutcitrine {
+                padding-left: 50px;
+                padding-right: 50px;
+
+                .homeaboutheading {
+                    font-size: 40px;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    line-height: 30px;
+                }
+
+                .readmore {
+                    margin-bottom: 0px;
+                    text-align: left;
+
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    //-------------------
+
+    .candidate-wrap {
+        margin-top: 20px;
+        padding-bottom: 40px;
+
+        .candidate-content-wrap {
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+
+    //--------------
+
+    .approch-wrap {
+        padding: 30px 0px 50px;
+
+        .approch-heading {
+            margin-bottom: 40px;
+        }
+
+        .approch-messur {
+            .approch-width {
+                width: 50%;
+
+                .safity-wrap {
+                    background: #fff;
+                    padding: 30px;
+                    border-radius: 10px;
+
+                    .safity-heading {
+                        font-size: 26px;
+                        text-align: left;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+    }
+}

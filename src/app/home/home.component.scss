@@ -1,0 +1,1885 @@
+p{
+    font-weight: 200;
+}
+.fix-navbar-header {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    right: 0px;
+    left: 0px;
+    z-index: 999;
+}
+
+
+.common-button {
+    margin-top: 40px;
+
+    a {
+        display: inline-block;
+        border: 1px solid #DB9200;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: .5s;
+
+        &:hover {
+            background: #DB9200;
+            transition: .5s;
+        }
+    }
+
+}
+
+
+.webbanner {
+    position: relative;
+
+    img {
+        width: 100%;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .custom-add {
+        margin-top: -5px;
+
+        .col-12.col-lg-6 {
+            padding: 0px;
+        }
+
+        .homwebheading {
+            // font-family: "DM Serif Display", serif;
+            font-family: "Poppins", sans-serif;
+            font-size: 18px;
+            color: #000;
+            text-align: center;
+            line-height: 1;
+            background-color: rgb(255, 234, 192);
+            padding: 10px;
+            font-weight: bold;
+        }
+    }
+}
+
+.homeaboutwrap {
+    margin-top: 20px;
+
+    .manage-homeaboutwrap {
+        align-items: center;
+
+        .homeaboutcitrine {
+            .homeaboutheading {
+                font-size: 24px;
+                font-weight: 400;
+                // margin-bottom: 10px;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .readmore {
+                margin-top: 20px;
+                text-align: center;
+                margin-bottom: 20px;
+
+                a {
+                    border: 1px solid #DB9200;
+                    display: inline-block;
+                    padding: 12px 20px;
+                    border-radius: 10px;
+                    color: #000;
+                    font-size: 14px;
+                    // font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+.homedermafiller {
+    margin-top: 20px;
+    position: relative;
+
+    .treatheading {
+        font-size: 20px;
+        // font-family: "DM Serif Display", serif;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 20px;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+    .for-mobile {
+        display: block;
+    }
+
+    .for-desktop {
+        display: none;
+    }
+
+    .imagedisplay-none{
+        display: none;
+    }
+    p{
+        font-size: 14px;
+    }
+
+    .imagedisplay-block{
+        display: block;
+        transition: 5s;
+    }
+    
+    
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+    .webbanner {
+        position: relative;
+    
+        img {
+            width: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: left;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .for-mobile {
+        display: block;
+    }
+
+    .for-desktop {
+        display: none;
+    }
+
+.webbanner {
+    position: relative;
+
+    img {
+        width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .custom-add {
+        margin-top: -5px;
+
+        .col-12.col-lg-6 {
+            padding: 0px;
+        }
+
+        .homwebheading {
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+            font-size: 44px;
+            color: #000;
+            text-align: center;
+            line-height: 1;
+            background-color: transparent;
+            padding: 10px;
+            position: absolute;
+            top: 40%;
+            right: 50px;
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .for-mobile {
+        display: none;
+    }
+
+    .for-desktop {
+        display: block;
+    }
+
+.webbanner {
+    position: relative;
+
+    img {
+        width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: left;
+    }
+
+    .custom-add {
+        margin-top: -5px;
+
+        .col-12.col-lg-6 {
+            padding: 0px;
+        }
+
+        .homwebheading {
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+            font-size: 44px;
+            color: #000;
+            text-align: center;
+            line-height: 1;
+            background-color: transparent;
+            padding: 10px;
+            position: absolute;
+            top: 40%;
+            right: 50px;
+            span{
+                display: block;
+            }
+        }
+    }
+}
+
+
+.common-button {
+    margin-top: 40px;
+
+    a {
+        display: inline-block;
+        border: 1px solid #DB9200;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: .5s;
+
+        &:hover {
+            background: #DB9200;
+            transition: .5s;
+        }
+    }
+
+}
+
+
+.webbanner {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .custom-add {
+        position: absolute;
+        top: 38%;
+        right: 10%;
+
+        .homwebheading {
+            font-size: 40px;
+            background: transparent;
+            color: #fff;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+
+.homedermafiller {
+    margin-top: 30px;
+    position: relative;
+
+    .treatheading {
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        span {
+            display: block;
+        }
+    }
+
+    .textonimagewrap {
+        position: relative;
+
+        .managehomedermafiller {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            height: 99.4%;
+            background-color: rgba(0, 0, 0, .5);
+            width: 50%;
+            align-items: center;
+            display: flex;
+
+            .fordark-bg {
+                padding: 40px 20px;
+
+                .homdermawrapper {
+                    .homedermafillerheading {
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 10px;
+                        text-align: left;
+                    }
+
+                    p {
+                        color: #fff;
+                        line-height: 30px;
+                        font-size: 16px;
+                    }
+
+                    .explore {
+                        margin-top: 40px;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            border: 1px solid #DB9200;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.laser-toningwrapper {
+    margin-top: 50px;
+    position: relative;
+
+    .laser-textwrap {
+        position: absolute;
+        width: 60%;
+        right: 30px;
+        background-color: #fff;
+        top: 0px;
+        bottom: 0px;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+
+        .laser-heading {
+            font-size: 40px;
+            // font-family: "DM Serif Display", serif;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+            text-align: left;
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .explorelaser {
+            margin-top: 40px;
+
+            a {
+                display: inline-block;
+                color: #000;
+                border: 1px solid #DB9200;
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.acneacarmainwrap {
+    position: relative;
+    margin-top: 50px;
+
+    .acnescarwrap {
+        position: absolute;
+        top: 0px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 40px 20px;
+
+        .acnescartextwrap {
+            .acne-heading {
+                font-size: 40px;
+                // font-family: "DM Serif Display", serif;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 10px;
+                // color: #fff;
+                text-align: left;
+            }
+
+            p {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            .acnelink-1 {
+                ul {
+                    display: flex;
+
+                    li {
+                        margin-right: 20px;
+
+                        &:last-child {
+                            margin: 0px;
+
+                        }
+
+                        a {
+                            transition: .5s;
+                            color: #fff;
+
+                            &:hover {
+                                color: #A3700F;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .acnelink-2 {
+                margin-top: 20px;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin-right: 20px;
+
+                        &:last-child {
+                            margin: 0px;
+                        }
+
+                        a {
+                            transition: .5s;
+                            color: #fff;
+
+                            &:hover {
+                                color: #A3700F;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .acneexplore {
+                margin-top: 40px;
+
+                a {
+                    display: inline-block;
+                    color: #fff;
+                    border: 1px solid #DB9200;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.maincombindwrap {
+    margin-top: 50px;
+    position: relative;
+
+    .combind-logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .combindwrap {
+        display: flex;
+        align-items: center;
+
+        .left-combindwrap {
+            width: 50%;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: rgba(0, 0, 0, .5);
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                height: 99%;
+            }
+
+            .leftcombind {
+                position: absolute;
+                bottom: 30px;
+                padding: 0px 20px;
+                z-index: 1;
+
+                .left-combindheading {
+                    font-size: 30px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 10px;
+                    // color: #fff;
+                    line-height: 1;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #fff;
+                }
+
+                .leftcombindexplore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+        }
+
+        .right-combindwrap {
+            width: 50%;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: rgba(0, 0, 0, .5);
+                width: 100%;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                height: 99%;
+            }
+
+            .rightcombind {
+                position: absolute;
+                bottom: 30px;
+                padding: 0px 10px;
+                z-index: 1;
+
+                .right-combindheading {
+                    font-size: 30px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 10px;
+                    // color: #fff;
+                    line-height: 1;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #fff;
+                }
+
+                .rightcombindexplore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.medical-dermatology {
+    position: relative;
+    margin-top: 50px;
+
+    .medical-wrap {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        background-color: rgba(0, 0, 0, .5);
+        height: 99.5%;
+
+        .medicaltext-wrap {
+            padding: 20px;
+
+            .medical-dermatologyheading {
+                font-size: 40px;
+                // font-family: "DM Serif Display", serif;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 20px;
+                // color: #fff;
+                line-height: 1;
+                text-align: left;
+
+                span {
+                    display: block;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                color: #fff;
+                margin-bottom: 20px;
+
+            }
+
+            ul {
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+
+                    &:last-child {
+                        margin: 0px;
+                    }
+
+                    a {
+                        color: #fff;
+                        transition: .5s;
+
+                        &:hover {
+                            color: #DB9200;
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+
+            .medical-explore {
+                margin-top: 40px;
+
+                a {
+                    display: inline-block;
+                    color: #fff;
+                    border: 1px solid #DB9200;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+.home-hydarfacial {
+    margin-top: 50px;
+    position: relative;
+
+    .haydrafaical-wrap {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .hydrafacial-text-wrap {
+            padding: 20px;
+
+            .hydrafacial-heading {
+                font-size: 40px;
+                // font-family: "DM Serif Display", serif;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 20px;
+                // color: #000;
+                line-height: 1;
+                text-align: left;
+            }
+
+            p {
+                color: #000;
+            }
+
+            .hydra-explore {
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1369px) {
+
+
+    .common-button {
+        margin-top: 40px;
+
+        a {
+            display: inline-block;
+            border: 1px solid #DB9200;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: .5s;
+
+            &:hover {
+                background: #DB9200;
+                transition: .5s;
+            }
+        }
+
+    }
+
+
+    .webbanner {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .custom-add {
+            position: absolute;
+            top: 38%;
+            right: 10%;
+
+            .homwebheading {
+                font-size: 60px;
+                background: transparent;
+                color: #fff;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .homeaboutwrap {
+        // margin-top: 50px;
+
+        .manage-homeaboutwrap {
+            align-items: center;
+
+            .homeaboutcitrine {
+                padding-left: 50px;
+                padding-right: 50px;
+
+                .homeaboutheading {
+                    font-size: 40px;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    line-height: 30px;
+                }
+
+                .readmore {
+                    margin-bottom: 0px;
+                    text-align: left;
+
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .homedermafiller {
+        margin-top: 50px;
+        position: relative;
+
+        .treatheading {
+            font-size: 40px;
+            margin-bottom: 50px;
+
+            span {
+                display: block;
+            }
+        }
+
+        .textonimagewrap {
+            position: relative;
+
+
+            .managehomedermafiller {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                height: 99.4%;
+                background-color: rgba(0, 0, 0, .5);
+                width: 50%;
+                align-items: center;
+                display: flex;
+
+                .fordark-bg {
+                    padding: 40px 40px;
+
+                    .homdermawrapper {
+                        .homedermafillerheading {
+                            font-size: 40px;
+                            // font-family: "DM Serif Display", serif;
+                            font-family: 'Poppins', sans-serif;
+                            margin-bottom: 10px;
+                            text-align: left;
+                        }
+
+                        p {
+                            color: #fff;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+
+                        .explore {
+                            margin-top: 40px;
+
+                            a {
+                                display: inline-block;
+                                color: #fff;
+                                border: 1px solid #DB9200;
+                                padding: 10px 20px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .laser-toningwrapper {
+
+        margin-top: 50px;
+        position: relative;
+        height: 485px;
+        img{
+            height: 485px;
+            object-fit: cover;
+        }
+
+        .laser-textwrap {
+            position: absolute;
+            width: 50%;
+            right: 70px;
+            background-color: #fff;
+            top: 0px;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            padding: 80px;
+
+            .laser-heading {
+                font-size: 40px;
+                // font-family: "DM Serif Display", serif;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 10px;
+                text-align: left;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .explorelaser {
+                margin-top: 40px;
+
+                a {
+                    display: inline-block;
+                    color: #000;
+                    border: 1px solid #DB9200;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .acneacarmainwrap {
+        position: relative;
+        margin-top: 50px;
+        height: 560px;
+        img{
+            height: 560px;
+            object-fit: cover;
+        }
+
+        .acnescarwrap {
+            position: absolute;
+            top: 0px;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 40px 80px;
+
+            .acnescartextwrap {
+                .acne-heading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 10px;
+                    color: #fff;
+                    text-align: left;
+                }
+
+                p {
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+
+                .acnelink-1 {
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 20px;
+
+                            &:last-child {
+                                margin: 0px;
+
+                            }
+
+                            a {
+                                transition: .5s;
+                                color: #fff;
+
+                                &:hover {
+                                    color: #A3700F;
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .acnelink-2 {
+                    margin-top: 20px;
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 20px;
+
+                            &:last-child {
+                                margin: 0px;
+                            }
+
+                            a {
+                                transition: .5s;
+                                color: #fff;
+
+                                &:hover {
+                                    color: #A3700F;
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .acneexplore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .maincombindwrap {
+        margin-top: 50px;
+        position: relative;
+        height: 409px;
+
+        .combind-logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .combindwrap {
+            display: flex;
+            align-items: center;
+
+            .left-combindwrap {
+                width: 50%;
+                text-align: center;
+                position: relative;
+                height: 409px;
+                img{
+                    height: 406px;
+                    object-fit: cover;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, .5);
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    height: 99%;
+                }
+
+                .leftcombind {
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 0px 20px;
+                    z-index: 1;
+
+                    .left-combindheading {
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 30px;
+                        color: #fff;
+                        line-height: 1;
+
+                        span {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+
+                    .leftcombindexplore {
+                        margin-top: 40px;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            border: 1px solid #DB9200;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+            }
+
+            .right-combindwrap {
+                width: 50%;
+                text-align: center;
+                position: relative;
+                height: 409px;
+                img{
+                    height: 406px;
+                    object-fit: cover;
+                }
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, .5);
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    height: 99%;
+                }
+
+                .rightcombind {
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 0px 20px;
+                    z-index: 1;
+
+                    .right-combindheading {
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 30px;
+                        color: #fff;
+                        line-height: 1;
+
+                        span {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+
+                    .rightcombindexplore {
+                        margin-top: 40px;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            border: 1px solid #DB9200;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .medical-dermatology {
+        position: relative;
+        margin-top: 50px;
+        height: 563px;
+        img{
+            height: 560px;
+            object-fit: cover;
+        }
+
+        .medical-wrap {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .5);
+            height: 99.5%;
+
+            .medicaltext-wrap {
+                padding: 30px;
+
+                .medical-dermatologyheading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 20px;
+                    color: #fff;
+                    line-height: 1;
+                    text-align: left;
+
+                    span {
+                        display: block;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 20px;
+
+                }
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin-right: 20px;
+
+                        &:last-child {
+                            margin: 0px;
+                        }
+
+                        a {
+                            color: #fff;
+                            transition: .5s;
+
+                            &:hover {
+                                color: #DB9200;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+
+                .medical-explore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .home-hydarfacial {
+        margin-top: 50px;
+        position: relative;
+        height: 562px;
+        img{
+            height: 562px;
+            object-fit: cover;
+        }
+
+        .haydrafaical-wrap {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .hydrafacial-text-wrap {
+                padding: 100px;
+
+                .hydrafacial-heading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 20px;
+                    color: #000;
+                    line-height: 1;
+                    text-align: left;
+                }
+
+                p {
+                    color: #000;
+                }
+
+                .hydra-explore {
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
+
+@media(min-width:1371px) {
+    .common-button {
+        margin-top: 40px;
+
+        a {
+            display: inline-block;
+            border: 1px solid #DB9200;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: .5s;
+
+            &:hover {
+                background: #DB9200;
+                transition: .5s;
+            }
+        }
+
+    }
+
+
+    .webbanner {
+        position: relative;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .custom-add {
+            position: absolute;
+            top: 38%;
+            right: 10%;
+
+            .homwebheading {
+                font-size: 70px;
+                background: transparent;
+                color: #fff;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .homeaboutwrap {
+        margin-top: 50px;
+
+        .manage-homeaboutwrap {
+            align-items: center;
+
+            .homeaboutcitrine {
+                padding-left: 50px;
+                padding-right: 50px;
+
+                .homeaboutheading {
+                    font-size: 40px;
+                    text-align: left;
+                }
+
+                p {
+                    text-align: left;
+                    line-height: 30px;
+                }
+
+                .readmore {
+                    margin-bottom: 0px;
+                    text-align: left;
+
+                    a {
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .homedermafiller {
+        margin-top: 50px;
+        position: relative;
+
+        .treatheading {
+            font-size: 40px;
+            margin-bottom: 50px;
+
+            span {
+                display: block;
+            }
+        }
+
+        .textonimagewrap {
+            position: relative;
+            height: 715px;
+            img{
+                height: 711px;
+                object-fit: cover;
+            }
+
+            .managehomedermafiller {
+                position: absolute;
+                top: 0px;
+                bottom: 0px;
+                height: 99.4%;
+                background-color: rgba(0, 0, 0, .5);
+                width: 50%;
+                align-items: center;
+                display: flex;
+
+                .fordark-bg {
+                    padding: 40px 100px;
+
+                    .homdermawrapper {
+                        .homedermafillerheading {
+                            font-size: 40px;
+                            // font-family: "DM Serif Display", serif;
+                            font-family: 'Poppins', sans-serif;
+                            margin-bottom: 10px;
+                            text-align: left;
+                        }
+
+                        p {
+                            color: #fff;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+
+                        .explore {
+                            margin-top: 40px;
+
+                            a {
+                                display: inline-block;
+                                color: #fff;
+                                border: 1px solid #DB9200;
+                                padding: 10px 20px;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .laser-toningwrapper {
+        margin-top: 50px;
+        position: relative;
+        height: 616px;
+        img{
+            height: 616px;
+            object-fit: cover;
+        }
+
+        .laser-textwrap {
+            position: absolute;
+            width: 50%;
+            right: 70px;
+            background-color: #fff;
+            top: 0px;
+            bottom: 0px;
+            display: flex;
+            align-items: center;
+            padding: 80px;
+
+            .laser-heading {
+                font-size: 40px;
+                // font-family: "DM Serif Display", serif;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 10px;
+                text-align: left;
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .explorelaser {
+                margin-top: 40px;
+
+                a {
+                    display: inline-block;
+                    color: #000;
+                    border: 1px solid #DB9200;
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .acneacarmainwrap {
+        position: relative;
+        // margin-top: 50px;
+        height: 712px;
+        img{
+            height: 712px;
+            object-fit: cover;
+        }
+        .acnescarwrap {
+            position: absolute;
+            top: 0px;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 40px 80px;
+
+            .acnescartextwrap {
+                .acne-heading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 10px;
+                    // color: #fff;
+                    text-align: left;
+                }
+
+                p {
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+
+                .acnelink-1 {
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 20px;
+
+                            &:last-child {
+                                margin: 0px;
+
+                            }
+
+                            a {
+                                transition: .5s;
+                                color: #fff;
+
+                                &:hover {
+                                    color: #A3700F;
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .acnelink-2 {
+                    margin-top: 20px;
+
+                    ul {
+                        display: flex;
+
+                        li {
+                            margin-right: 20px;
+
+                            &:last-child {
+                                margin: 0px;
+                            }
+
+                            a {
+                                transition: .5s;
+                                color: #fff;
+
+                                &:hover {
+                                    color: #A3700F;
+                                    transition: .5s;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .acneexplore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .maincombindwrap {
+        // margin-top: 50px;
+        position: relative;
+        height: 508px;
+
+        .combind-logo {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9;
+
+            img {
+                width: 100px;
+            }
+        }
+
+        .combindwrap {
+            display: flex;
+            align-items: center;
+
+            .left-combindwrap {
+                width: 50%;
+                text-align: center;
+                position: relative;
+                height: 512px;
+                img{
+                    height: 508px;
+                    object-fit: cover;
+                }
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, .5);
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    height: 99%;
+                }
+
+                .leftcombind {
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 0px 100px;
+                    z-index: 1;
+
+                    .left-combindheading {
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 30px;
+                        // color: #fff;
+                        line-height: 1;
+
+                        span {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+
+                    .leftcombindexplore {
+                        margin-top: 40px;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            border: 1px solid #DB9200;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+            }
+
+            .right-combindwrap {
+                width: 50%;
+                text-align: center;
+                position: relative;
+                height: 512px;
+                img{
+                    height: 508px;
+                    object-fit: cover;
+                }
+
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: rgba(0, 0, 0, .5);
+                    width: 100%;
+                    top: 0px;
+                    left: 0px;
+                    bottom: 0px;
+                    height: 99%;
+                }
+
+                .rightcombind {
+                    position: absolute;
+                    bottom: 30px;
+                    padding: 0px 100px;
+                    z-index: 1;
+
+                    .right-combindheading {
+                        font-size: 40px;
+                        // font-family: "DM Serif Display", serif;
+                        font-family: 'Poppins', sans-serif;
+                        margin-bottom: 30px;
+                        // color: #fff;
+                        line-height: 1;
+
+                        span {
+                            display: block;
+                        }
+                    }
+
+                    p {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+
+                    .rightcombindexplore {
+                        margin-top: 40px;
+
+                        a {
+                            display: inline-block;
+                            color: #fff;
+                            border: 1px solid #DB9200;
+                            padding: 10px 20px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .medical-dermatology {
+        position: relative;
+        height: 716px;
+        // margin-top: 50px;
+        img{
+            height: 713px;
+            object-fit: cover;
+        }
+
+        .medical-wrap {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            bottom: 0px;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, .5);
+            height: 99.5%;
+
+            .medicaltext-wrap {
+                padding: 100px;
+
+                .medical-dermatologyheading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 20px;
+                    // color: #fff;
+                    line-height: 1;
+                    text-align: left;
+
+                    span {
+                        display: block;
+                    }
+                }
+
+                p {
+                    font-size: 16px;
+                    color: #fff;
+                    margin-bottom: 20px;
+
+                }
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin-right: 20px;
+
+                        &:last-child {
+                            margin: 0px;
+                        }
+
+                        a {
+                            color: #fff;
+                            transition: .5s;
+
+                            &:hover {
+                                color: #DB9200;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+
+                .medical-explore {
+                    margin-top: 40px;
+
+                    a {
+                        display: inline-block;
+                        color: #fff;
+                        border: 1px solid #DB9200;
+                        padding: 10px 20px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .home-hydarfacial {
+        // margin-top: 50px;
+        position: relative;
+        height: 714px;
+        img{
+            height: 714px;
+            object-fit: cover;
+        }
+
+        .haydrafaical-wrap {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .hydrafacial-text-wrap {
+                padding: 100px;
+
+                .hydrafacial-heading {
+                    font-size: 40px;
+                    // font-family: "DM Serif Display", serif;
+                    font-family: 'Poppins', sans-serif;
+                    margin-bottom: 20px;
+                    // color: #000;
+                    line-height: 1;
+                    text-align: left;
+                }
+
+                p {
+                    color: #000;
+                }
+
+                .hydra-explore {
+                    a {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

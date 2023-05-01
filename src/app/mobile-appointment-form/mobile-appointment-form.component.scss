@@ -1,0 +1,169 @@
+#consultation-wrapper {
+    background-color: #2e2e2e;
+    padding: 30px 10px;
+
+    .manage-webform {
+        align-items: center;
+
+        .consultation-form {
+            .consulationform-heading {
+                margin-bottom: 20px;
+                h2 {
+                    color: #DB9200;
+                    // font-family: "acumin-pro-extra-condensed";
+                    font-family: 'Poppins', sans-serif;
+                    padding: 0px 0px 10px;
+                    background: transparent linear-gradient(249deg, #F8D905 0%, #E4A52D 38%, #E9C379 70%, #A3700F 100%, #F8D905 100%) 0% 0% no-repeat padding-box;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-weight: bold;
+                    font-size: 24px;
+                    text-align: center;
+                    line-height: 1.1;
+                    // margin-bottom: 10px;
+                    
+                }
+                p{
+                    text-align: center;
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 1.1;
+                    &:nth-child(3){
+                        margin:6px 0px;
+                    }
+                }
+            }
+
+            form {
+                .form-2 {
+                    input {
+                        border-radius: 0px;
+                        border: 0px;
+                        width: 100%;
+                        margin-bottom: 10px;
+                        padding: 16px;
+                        position: relative;
+                    }
+
+                    .form-control {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        padding: 12px;
+                        font-size: 14px;
+                        border-radius: 0px;
+                        // font-family: "Marcellus", serif;
+                        font-family: 'Poppins', sans-serif;
+                    }
+
+                    // input[type="date"] {
+                    //     font-family: "Marcellus", serif;
+                    //     font-size: 16px;
+                    //     color: #777;
+
+                    //     &::before {
+                    //         content: attr(placeholder);
+                    //         width: 100%;
+
+                    //     }
+
+                    //     &:focus {
+                    //         &::before {
+                    //             display: none;
+                    //         }
+                    //     }
+
+                    //     &:valid {
+                    //         &::before {
+                    //             display: none;
+                    //         }
+                    //     }
+
+                    //     &::-webkit-calendar-picker-indicator { 
+                    //         background: transparent;
+                    //         bottom: 0;
+                    //         color: transparent;
+                    //         cursor: pointer;
+                    //         height: auto;
+                    //         left: 0;
+                    //         position: absolute;
+                    //         right: 0;
+                    //         top: 0;
+                    //         width: auto;
+                    //     }
+                    // }
+                    .invalid-feedback {
+                        color: red;
+                        margin-bottom: 10px;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+
+
+                }
+            }
+
+            .manageform-buttons {
+                align-items: center;
+
+                .manageweb-captacha {
+                    .captacha-web {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 40px;
+
+                        .refresh-btn {
+                            margin: 0px 10px 0px 0px;
+                            background: #fff;
+                            padding: 0px 6px;
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            border: 0px;
+                            height: 40px;
+                        }
+
+                        .captchacodeleftpic{
+                            height: 40px;
+                            img{
+                                width: 100%;
+                                height: 40px;
+                            }
+                        }
+                        .commoncaptchinputright{
+                            height: 36px;
+                            .invalid-feedback {
+                                color: red;
+                                font-size: 12px;
+                                margin-top: 2px;
+                                font-weight: bold;
+                            }
+                        }
+                        .type-captcha {
+                            border-radius: 0px;
+                        }
+                    }
+                }
+
+                .submit-now {
+                    .submit-button {
+                        color: #fff;
+                        background: rgb(170, 119, 23);
+                        background: linear-gradient(90deg, rgb(170, 119, 23) 0%, rgb(229, 182, 91) 100%);
+                        width: 100%;
+                        height: 100%;
+                        border: 0px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        text-transform: capitalize;
+                        padding: 12px 0px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+

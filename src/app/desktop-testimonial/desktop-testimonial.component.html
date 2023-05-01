@@ -1,0 +1,37 @@
+<div class="desktop-testimonialwrap for-desktop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" *ngFor="let testi of testimonials">
+                <div class="testimonial-contentwrap">
+                    <div class="nameandothergroupwrap">
+                        <div class="nameandothergroup">
+                            <div class="clientname">{{ testi.name }}</div>
+                            <div class="rating-group">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="review-image">
+                          <img [lazyLoad]="image55" [defaultImage]="defaultImage" class="img-fluid" width="80" height="19"
+                          alt="Practo" *ngIf="testi.source == 'practo'" />
+                        <img [lazyLoad]="image1016" [defaultImage]="defaultImage" class="img-fluid" alt="google"
+                          *ngIf="testi.source == 'google'" />
+                        <img [lazyLoad]="image1017" [defaultImage]="defaultImage" class="img-fluid" alt="lybrate"
+                          *ngIf="testi.source == 'lybrate'" />
+                        <img [lazyLoad]="image1018" [defaultImage]="defaultImage" class="img-fluid" alt="justdial"
+                          *ngIf="testi.source == 'justdial'" />
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <p [innerHTML]="testi.description"></p>
+                    </div>
+                    <p class="text-center mt-3" style="font-size: 12px;">✱ Opinions/Results may
+                        vary from person to person.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

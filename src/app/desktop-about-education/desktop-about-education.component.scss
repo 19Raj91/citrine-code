@@ -1,0 +1,91 @@
+.education-wrapper {
+    background-color: #252525;
+    padding: 40px 0px;
+
+
+    .education-heading {
+        margin-bottom: 20px;
+        line-height: 1;
+        font-size: 40px;
+    }
+
+    .education-diffrentheading {
+        color: #fff;
+        // text-decoration: underline;
+        font-size: 24px;
+        line-height: 1;
+        margin-bottom: 20px;
+        margin-top: 30px;
+    }
+
+    .educationdetail {
+        margin-bottom: 20px;
+        
+
+        .profession {
+            font-size: 24px;
+            color: #DB9200;
+            margin-bottom: 10px;
+            font-weight: bold;
+
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 0px;
+            color: #fff;
+            line-height: 22px;
+            span{
+                display:block ;
+            }
+        }
+    }
+
+    .manage-education {
+        display: flex;
+        // flex-wrap: nowrap;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        .common-width {
+
+            .expcommonwrap {
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 150px;
+                padding: 40px;
+                margin-bottom: 25px
+            }
+
+            .job-expheading {
+                margin-bottom: 10px;
+
+                p {
+                    color: #DB9200;
+                }
+            }
+
+
+        }
+
+        .place {
+            color: #252525;
+        }
+    }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.manage-education::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.manage-education {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

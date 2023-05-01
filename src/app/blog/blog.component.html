@@ -1,0 +1,63 @@
+<section class="commonwrap commonstatic">
+    <img class="w-100" [lazyLoad]="image1" alt="Dr image" class="w-100 for-desktop" [defaultImage]="defaultImage" [useSrcset]="true">
+    <div class="banner-heading for-mobile">Blogs</div>
+    <div class="banner-heading for-desktop">Blogs</div>
+
+    <div class="bredcurmbborder">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bredcrumb">
+                        <ul>
+                            <li><a routerLink="/">Home</a></li>
+                             <li><a >Blogs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="for-mobile">
+    <app-mobile-requestacallback></app-mobile-requestacallback>
+</div>
+<div class="blog-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <div class="row">
+                    <div class="col-12 col-sm-4 blog-space" *ngFor="let blg of blogs | paginate: { itemsPerPage: 6, currentPage: p }">
+                        <a routerLink="/blog-post/{{blg.url}}" class="short-blog-wrap">
+                            <div class="short-blog-imagewrap">
+                                <img src="{{bgimageurl+blg.image}}" class="w-100"  alt="{{blg.alt_tag}}">
+                            </div>
+                            <div class="short-blog-wrapcontent">
+                                <div class="date-admin">
+                                    <div class="writer-name">By Citrine Clinic</div>
+                                    <div class="blog-postdate">{{ blg.date }}</div>
+                                    <!-- <div class="share-icon"><a href="#"><i class="fa fa-share-alt"></i></a></div> -->
+                                </div>
+                                <div class="blogshort-title">{{ blg.blog_name }}</div>
+                                <div class="blog-short-discription" [innerHTML]="blg.short_desc"></div>
+                                <div class="blog-detailbutton">
+                                    <a routerLink="/blog-post/{{blg.url}}"><button>Read More</button></a>
+
+                                </div>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <div class="paginationlist">
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-mobile-appointment-form></app-mobile-appointment-form>
+
+<app-desktop-appointment></app-desktop-appointment>
